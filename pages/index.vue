@@ -32,7 +32,7 @@
        <div 
           class="pt-10 pb-20" 
           style="background-image: linear-gradient(92.68deg, #1B5CA6 0%, #4597C6 97.28%);">
-          <div class="text-white text-5xl font-bold text-center py-10 leading-12">
+          <div class="text-white text-5xl font-bold text-center py-10 leading-14">
             North American Industry Classification System <br/>(NAICS) and Business Classification
           </div>
           <div class="flex flex-wrap justify-center gap-y-20 gap-x-8 text-white text-center w-4/5 mx-auto text-xl font-bold text-balance leading-11">

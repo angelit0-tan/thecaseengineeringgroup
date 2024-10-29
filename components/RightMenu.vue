@@ -1,8 +1,10 @@
 <template>
-    <div class="flex flex-wrap gap-4 justify-center w-5/6 mx-auto">
+    <div 
+        class="flex flex-wrap gap-4 justify-center w-5/6 mx-auto text-sm"
+        :class="{'flex-col' : isSubPage}">
         <button
             v-for="menu in menus" :key="menu.link"
-            class="px-4 py-3 text-black bg-white rounded-full flex items-center gap-2 hover:bg-darkgreen hover:text-white transition delay-75 duration-300"> 
+            class="px-4 py-3 text-black bg-white rounded-full flex items-center gap-2 hover:bg-darkgreen hover:text-white transition delay-75 duration-300 w-fit"> 
             <img src="/images/add.png"/>
             <NuxtLink :to="menu.link">
                 <span> {{  menu.name }}</span>
@@ -12,6 +14,12 @@
 </template>
 <script>
     export default{
+        props:{
+            isSubPage:{
+                type: Boolean,
+                default: false
+            }
+        },
         data() {
             return{
                 menus: [{
@@ -23,11 +31,6 @@
                         link: 'cyber-security',
                         order: 1,
                     },{
-                        name: 'Zero Trust Security',
-                        link: 'zero-trust-security',
-                        order: 1,
-                    },
-                    {
                         name: 'Zero Trust Security',
                         link: 'zero-trust-security',
                         order: 1,
