@@ -10,7 +10,7 @@
                        </div>
                        <div class="w-2/4">
                            <div class="w-full border border-white rounded-full">
-                               <input type="text" class="rounded-full w-full text-white bg-black px-4 py-2" placeholder="Submit your problem here..."/>
+                               <input type="text" class="rounded-full w-full text-white bg-black px-4 py-4" placeholder="Submit your problem here..."/>
                            </div>
                        </div>
                        <div>
@@ -21,20 +21,104 @@
                </div>
            </div>
        </div>
-       <div class="container mx-auto">
+       <div class="container mx-auto pt-10 pb-20">
            <div class="text-white text-4xl font-bold text-center py-10">
                Who We Are and Why It Matters
            </div>
+           <div class="w-4/5 mx-auto">
+            <img src="https://ypfs3.s3.us-west-2.amazonaws.com/photos/STp3MC20tI0jLYFXbkuOIM0CVjp6L5G9tw03jmWE.gif" class="rounded-lg"/>
+           </div>
        </div>
-       <div class="text-white">
-           test links
-
+       <div 
+          class="pt-10 pb-20" 
+          style="background-image: linear-gradient(92.68deg, #1B5CA6 0%, #4597C6 97.28%);">
+          <div class="text-white text-4xl font-bold text-center py-10 leading-12">
+            North American Industry Classification System <br/>(NAICS) and Business Classification
+          </div>
+          <div class="flex flex-wrap justify-center gap-y-20 gap-x-8 text-white text-center w-4/5 mx-auto text-xl font-bold text-balance leading-11">
+            <div class="bg-black rounded-lg p-6 w-96 "
+              v-for="industry in industries" :key="industry.id">
+              <a :href="industry.link" target="_blank" class="flex flex-col h-full">
+                <div>
+                  {{ industry.id }}
+                </div>
+                <div class="mt-auto">
+                    {{ industry.name }}
+                </div>
+              </a>
+            </div>
+          </div>
        </div>
        <div>
            <site-footer/>
        </div>
   </div>
 </template>
+<script>
+  export default{
+    data() {
+      return {
+        industries:[{
+          id: '541330',
+          name: 'Engineering Services',
+          link: 'https://www.naics.com/naics-code-description/?code=541330&v=2022'
+        },{
+          id: '541511',
+          name: 'Customer Computer Programming Services',
+          link: 'https://www.naics.com/naics-code-description/?code=541511&v=2022'
+        },{
+          id: '541512',
+          name: 'Computer Systems Design Services',
+          link: 'https://www.naics.com/naics-code-description/?code=541330&v=2022'
+        },{
+          id: '541513',
+          name: 'Computer Facilities Management Services',
+          link: 'https://www.naics.com/naics-code-description/?code=541513&v=2022'
+        },{
+          id: '541511',
+          name: 'Customer Computer Programming Services',
+          link: 'https://www.naics.com/naics-code-description/?code=541511&v=2022'
+        },{
+          id: '541512',
+          name: 'Computer Systems Design Services',
+          link: 'https://www.naics.com/naics-code-description/?code=541512&v=2022'
+        },{
+          id: '541513',
+          name: 'Computer Facilities Management Services',
+          link: 'https://www.naics.com/naics-code-description/?code=541513&v=2022'
+        },{
+          id: '541519',
+          name: 'Other Computer Related Services',
+          link: 'https://www.naics.com/naics-code-description/?code=541519&v=2022'
+        },{
+          id: '541611',
+          name: 'Administrative Management and General',
+          link: 'https://www.naics.com/naics-code-description/?code=541611&v=2022'
+        },{
+          id: '519290',
+          name: 'Web Search Portals and All Other Information Services',
+          link: 'https://www.naics.com/naics-code-description/?code=541611&v=2022'
+        },{
+          id: '541990',
+          name: 'All Other Professional, Scientific, and Technical Services',
+          link: 'https://www.naics.com/naics-code-description/?code=541990&v=2022'
+        },{
+          id: '541618',
+          name: 'Other Management Consulting Services',
+          link: 'https://www.naics.com/naics-code-description/?code=541618&v=2022'
+        },{
+          id: '611420',
+          name: 'Computer Training',
+          link: 'https://www.naics.com/naics-code-description/?code=611420&v=2022'
+        },{
+          id: '541110',
+          name: 'Offices of Lawyers',
+          link: 'https://www.naics.com/naics-code-description/?code=541110&v=2022'
+        }]
+      }
+    }
+  }
+</script>
 <style lang="scss" scoped>
 
 </style>

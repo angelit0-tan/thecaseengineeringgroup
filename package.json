@@ -9,7 +9,11 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
+    "axios": "^1.7.7",
     "core-js": "^3.25.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
     "nodemailer": "^6.9.16",
     "nuxt": "^2.15.8",
     "vue": "^2.7.10",

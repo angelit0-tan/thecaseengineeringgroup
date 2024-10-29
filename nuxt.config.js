@@ -1,4 +1,7 @@
 export default {
+  server: {
+    port: process.env.port || 3000 // default: 3000
+  },
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
   ssr: false,
 
@@ -15,7 +18,7 @@ export default {
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'icon', type: 'image/x-icon', href: '/static/images/icon.jpg' },
       { rel: 'stylesheet', href: 'https://rsms.me/inter/inter.css' }
     ]
   },
@@ -49,17 +52,9 @@ export default {
         colors: {
           'black' : '#000000',
           'white': '#ffffff',
-          'light-gray': '#f5f5f5',
-          'gray': '#cccccc',
-          'gray-2': '#B1B1B1',
-          'gray-3': '#aaaaaa',
-          'gray-4': '#DBDBDB',
-          'gray-5': '#ECECEC',
-          'mine-shaft': '#2a2a2a',
-          'tundora': '#434343',
-          'scorpion': '#595959',
-          'red': '#f20000',
           'fern': '#5DBB63',
+          'green' : '#008000',
+          'darkgreen' : '#006400',
           'blue': '#0000ff',
         },
         fontFamily: {
@@ -70,6 +65,8 @@ export default {
         extend: {
           lineHeight: {
             'inherit': 'inherit',
+            '11': '2.75rem',
+            '12': '3rem',
           },
         }
       },

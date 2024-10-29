@@ -2,7 +2,7 @@
     <div class="flex flex-wrap gap-4 justify-center w-5/6 mx-auto">
         <button
             v-for="menu in menus" :key="menu.link"
-            class="px-4 py-3 text-black bg-white rounded-full flex items-center gap-2"> 
+            class="px-4 py-3 text-black bg-white rounded-full flex items-center gap-2 hover:bg-darkgreen hover:text-white transition delay-75 duration-300"> 
             <img src="/images/add.png"/>
             <span> {{  menu.name }}</span>
         </button>
@@ -10,7 +10,7 @@
 </template>
 <script>
     export default{
-        data(){
+        data() {
             return{
                 menus: [{
                         name: 'Program Support Services',
