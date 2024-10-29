@@ -5,7 +5,7 @@
            <div class="bg-[url('/images/home-bg.jpg')]" style=" background-repeat: no-repeat, repeat; background-size: cover;">
                <div class="py-32">
                    <div class="flex flex-col gap-10 justify-center mb-8 items-center">
-                       <div class="text-white text-6xl font-bold">
+                       <div class="text-white text-7xl font-bold">
                            What Problem Do You Need Solved?
                        </div>
                        <div class="w-2/4">
@@ -22,7 +22,7 @@
            </div>
        </div>
        <div class="container mx-auto pt-10 pb-20">
-           <div class="text-white text-4xl font-bold text-center py-10">
+           <div class="text-white text-5xl font-bold text-center py-10">
                Who We Are and Why It Matters
            </div>
            <div class="w-4/5 mx-auto">
@@ -32,7 +32,7 @@
        <div 
           class="pt-10 pb-20" 
           style="background-image: linear-gradient(92.68deg, #1B5CA6 0%, #4597C6 97.28%);">
-          <div class="text-white text-4xl font-bold text-center py-10 leading-12">
+          <div class="text-white text-5xl font-bold text-center py-10 leading-12">
             North American Industry Classification System <br/>(NAICS) and Business Classification
           </div>
           <div class="flex flex-wrap justify-center gap-y-20 gap-x-8 text-white text-center w-4/5 mx-auto text-xl font-bold text-balance leading-11">
@@ -49,9 +49,7 @@
             </div>
           </div>
        </div>
-       <div>
-           <site-footer/>
-       </div>
+        <site-footer/>
   </div>
 </template>
 <script>
