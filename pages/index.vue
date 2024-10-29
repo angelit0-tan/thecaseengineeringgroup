@@ -1,8 +1,9 @@
 <template>
   <div>
        <site-header/>
-       <div>
-           <div class="bg-[url('/images/home-bg.jpg')]" style=" background-repeat: no-repeat, repeat; background-size: cover;">
+       <BgHeader>
+           <div class="bg-service" 
+            style="background-image: url('/images/home-bg.jpg'), linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4))">
                <div class="py-32">
                    <div class="flex flex-col gap-10 justify-center mb-8 items-center">
                        <div class="text-white text-7xl font-bold">
@@ -20,7 +21,7 @@
                    <RightMenu/>
                </div>
            </div>
-       </div>
+        </BgHeader>
        <div class="container mx-auto pt-10 pb-20">
            <div class="text-white text-5xl font-bold text-center py-10">
                Who We Are and Why It Matters

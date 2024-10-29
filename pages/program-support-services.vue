@@ -3,7 +3,7 @@
         <BgHeader>
             <div 
                 class="bg-service relative" 
-                style="background-image: url('/images/product-support-services-bg-1.jpg'), linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6))">
+                style="background-image: url('/images/product-support-services-bg-1.jpg'), linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5))">
                 <div class="text-white md:text-7xl text-4xl font-bold md:w-1/2 w-full md:px-10 px-5 absolute text-service">
                     Program Support Services
                 </div>
