@@ -1,7 +1,9 @@
 <template>
-    <div class="flex container mx-auto py-5 items-center">
+    <div class="flex container mx-auto py-6 items-center">
         <div>
-            <img src="/images/logo-small.png"/>
+            <a href="/">
+                <img src="/images/logo-small.png"/>
+            </a>
         </div>
         <div>
             <ul class="flex gap-3 text-white items-center">

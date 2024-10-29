@@ -4,7 +4,9 @@
             v-for="menu in menus" :key="menu.link"
             class="px-4 py-3 text-black bg-white rounded-full flex items-center gap-2 hover:bg-darkgreen hover:text-white transition delay-75 duration-300"> 
             <img src="/images/add.png"/>
-            <span> {{  menu.name }}</span>
+            <NuxtLink :to="menu.link">
+                <span> {{  menu.name }}</span>
+            </NuxtLink>
         </button>
     </div>
 </template>
