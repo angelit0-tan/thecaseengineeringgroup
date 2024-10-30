@@ -3,7 +3,7 @@
         <BgHeader>
             <div 
                 class="bg-service relative" 
-                style="background-image: url('/images/capital-planning-and-investment-control-bg-1.png'), linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5))">
+                style="background-image: url('/images/capital-planning-and-investment-control-bg-1.jpg'), linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5))">
                 <div class="text-white md:text-7xl text-4xl font-bold md:w-1/2 w-full md:px-10 px-5 absolute text-service">
                     Capital Planning and Investment Control 
                 </div>
@@ -30,7 +30,7 @@
                         <p class="mb-7">
                             Our CPIC services include project portfolio management, risk assessment, cost-benefit analysis, and performance monitoring. We leverage industry best practices to ensure that your investmentsare not only well-planned but also continuously evaluated for alignment with your long-term strategic goals. Our deep experience working with federal agencies like the Department of Treasury and the IRS ensures that we are well-versed in federal CPIC processes, allowing us to deliver solutions that meet both regulatory requirements and business needs.
                         </p>
-                        <div class="bg-[url('/images/capital-planning-and-investment-control-bg-2.png')] mb-10"
+                        <div class="bg-[url('/images/capital-planning-and-investment-control-bg-2.jpg')] mb-10"
                             style="background-repeat: no-repeat, repeat; background-size: cover; min-height: 50vh;background-position: center;">
                         </div>
                         <div class="text-3xl font-bold text-left md:leading-14 mb-5">

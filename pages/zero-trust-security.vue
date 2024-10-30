@@ -3,7 +3,7 @@
         <BgHeader>
             <div 
                 class="bg-service relative" 
-                style="background-image: url('/images/zero-trust-security-bg-1.jpeg'), linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5))">
+                style="background-image: url('/images/zero-trust-security-bg-1.jpg'), linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5))">
                 <div class="text-white md:text-7xl text-4xl font-bold md:w-1/2 w-full md:px-10 px-5 absolute text-service">
                     Zero Trust Security
                 </div>
@@ -30,7 +30,7 @@
                         <p class="mb-7">
                             We take a holistic approach to Zero Trust Security, integrating advanced technologies such as multi-factor authentication (MFA), identity and access management (IAM), micro-segmentation,and endpoint security to ensure that all interactions with your network are secure. Our team designs Zero Trust architectures that fit seamlessly with your existing infrastructure—whether it’s on-premises, cloud-based, or hybrid—so you can continue operating efficiently while ensuring robust protection of your data, applications, and systems.
                         </p>
-                        <div class="bg-[url('/images/zero-trust-security-bg-2.png')] mb-10"
+                        <div class="bg-[url('/images/zero-trust-security-bg-2.jpg')] mb-10"
                             style="background-repeat: no-repeat, repeat; background-size: cover; min-height: 50vh;background-position: center;">
                         </div>
                         <div class="text-3xl font-bold text-left md:leading-14 mb-5">

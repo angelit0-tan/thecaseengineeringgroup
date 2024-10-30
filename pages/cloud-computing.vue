@@ -28,7 +28,7 @@
                         <p class="mb-7">
                             Our cloud computing services cover a wide range of needs, including cloud strategy development, cloud migration, infrastructure-as-code (IaC) deployment, and ongoing cloud management. We ensure that your cloud environment is optimized for performance, security, and cost-efficiency, enabling your organization to innovate and grow without the constraints of traditional infrastructure. With our deep understanding of cloud architectures and best practices, we help you build a future-ready cloud environment that scales with your business.
                         </p>
-                        <div class="bg-[url('/images/cloud-computing-bg-2.png')] mb-10"
+                        <div class="bg-[url('/images/cloud-computing-bg-2.jpg')] mb-10"
                             style="background-repeat: no-repeat, repeat; background-size: cover; min-height: 50vh;background-position: center;">
                         </div>
                         <div class="text-3xl font-bold text-left md:leading-14 mb-5">

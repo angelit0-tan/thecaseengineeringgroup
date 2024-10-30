@@ -28,7 +28,7 @@
                         <p class="mb-7">
                             Our approach to network operations is built on best practices and industry standards, including ITIL and NIST guidelines. We provide continuous monitoring through advanced network management systems that offer real-time visibility into your network's health and performance. Our proactive maintenance ensures that your systems are up-to-date and protected from vulnerabilities, while our incident response capabilities minimize downtime by resolving issues quickly and efficiently. With our extensive experience managing critical infrastructures for both government agencies and private enterprises, we understand what it takes to keep your network running at full capacity.
                         </p>
-                        <div class="bg-[url('/images/network-operations-bg-2.png')] mb-10"
+                        <div class="bg-[url('/images/network-operations-bg-2.jpg')] mb-10"
                             style="background-repeat: no-repeat, repeat; background-size: cover; min-height: 50vh;background-position: center;">
                         </div>
                         <div class="text-3xl font-bold text-left md:leading-14 mb-5">

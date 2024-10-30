@@ -3,7 +3,7 @@
         <BgHeader>
             <div 
                 class="bg-service relative" 
-                style="background-image: url('/images/cloud-security-bg-1.jpeg'), linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5))">
+                style="background-image: url('/images/cloud-security-bg-1.jpg'), linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5))">
                 <div class="text-white md:text-7xl text-4xl font-bold md:w-1/2 w-full md:px-10 px-5 absolute text-service">
                     Cloud Security
                 </div>
@@ -22,7 +22,7 @@
                         <p class="mb-7">
                             As organizations continue to embrace the flexibility and scalability of the cloud, securing cloud environments has never been more critical. With the rapid adoption of cloud platforms like AWS, Azure, and Google Cloud, new vulnerabilities and attack surfaces are constantly emerging. The shift to cloud computing introduces unique challenges, including data privacy concerns, misconfigured resources, and unauthorized access to sensitive information. Are you confident in your cloud security posture, or is your organization vulnerable to the risks that come with modern cloud deployments?
                         </p>
-                        <div class="bg-[url('/images/cloud-security-bg-2.png')] mb-10"
+                        <div class="bg-[url('/images/cloud-security-bg-2.jpg')] mb-10"
                             style="background-repeat: no-repeat, repeat; background-size: cover; min-height: 50vh;background-position: center;">
                         </div>
                         <p class="mb-7">

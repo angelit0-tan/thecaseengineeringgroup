@@ -3,7 +3,7 @@
         <BgHeader>
             <div 
                 class="bg-service relative" 
-                style="background-image: url('/images/cyber-security-bg-1.png'), linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5))">
+                style="background-image: url('/images/cyber-security-bg-1.jpg'), linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5))">
                 <div>
                     <div class="text-white md:text-7xl text-4xl font-bold md:w-108 w-full md:px-10 md:px-10 px-5 absolute text-service flex-wrap">
                         Cybersecurity
@@ -31,7 +31,7 @@
                         <p class="mb-7">
                             Recognizing the importance of embracing innovation to stay competitive, organizations must equally prioritize ensuring the confidentiality, integrity, and availability of data associated with that innovation. In the ever-evolving landscape of technology, threat actors continually advance their methods to gain access, manipulate, and/or prevent access to valuable information. At the C.A.S.E. Engineering Group (C.A.S.E.), we stand as a steadfast partner, committed to reducing cybersecurity risk for organizations by offering expertise that goes beyond industry standards and compliance requirements. Our approach is dedicated to fortifying your digital resilience, ensuring your organization not only keeps pace with technology advancements but stays ahead of potential threats.
                         </p>
-                        <div class="bg-[url('/images/cyber-security-bg-2.png')] mb-10"
+                        <div class="bg-[url('/images/cyber-security-bg-2.jpg')] mb-10"
                             style="background-repeat: no-repeat, repeat; background-size: cover; min-height: 50vh;background-position: center;">
                         </div>
                         <p class="mb-7">

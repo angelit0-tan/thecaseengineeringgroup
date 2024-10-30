@@ -3,7 +3,7 @@
         <BgHeader>
             <div 
                 class="bg-service relative" 
-                style="background-image: url('/images/requirements-management-bg-1.png'), linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5))">
+                style="background-image: url('/images/requirements-management-bg-1.jpg'), linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5))">
                 <div class="text-white md:text-7xl text-4xl font-bold md:w-1/2 w-full md:px-10 px-5 absolute text-service">
                     Requirements Management
                 </div>
@@ -28,7 +28,7 @@
                         <p class="mb-7">
                             Our requirements management services include requirements elicitation, documentation, traceability, and change management. We leverage industry-standard methodologies such as Agile, Waterfall, and Hybrid approaches to ensure that requirements are continuously monitored and adjusted as needed throughout the project lifecycle. Whether you’re managing an IT implementation, a software development project, or a system integration, we ensure that your requirements are defined, tracked, and met, leading to successful project outcomes.
                         </p>
-                        <div class="bg-[url('/images/requirements-management-bg-2.png')] mb-10"
+                        <div class="bg-[url('/images/requirements-management-bg-2.jpg')] mb-10"
                             style="background-repeat: no-repeat, repeat; background-size: cover; min-height: 50vh;background-position: center;">
                         </div>
                         <div class="text-3xl font-bold text-left md:leading-14 mb-5">
