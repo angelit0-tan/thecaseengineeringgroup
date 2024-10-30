@@ -84,9 +84,12 @@
                     </label>
                 </div>
                 <div>
-                    <textarea class="bg-light-gray w-full" rows="6" v-model="form.message"/>
+                    <textarea class="bg-light-gray w-full px-3 py-2" rows="6" v-model="form.message"/>
                 </div>
             </div>
+        </div>
+        <div>
+            <input type="file" @change="handleFileUpload">
         </div>
         <div class="text-center py-5">
             <button class="px-8 py-3 text-white bg-fern" @click="sendEmail"> Submit </button>
@@ -130,6 +133,7 @@ export default{
                 company: null,
                 jobTitle: null,
                 message: null,
+                attachment: null,
                 selectedOptions: [],
             },
             isSending: false
@@ -141,7 +145,9 @@ export default{
                 this.form[field] = null;
             }
         },
-
+        handleFileUpload(event) {
+            this.form.attachment = event.target.files[0];
+        },
         async sendEmail() {
             if (this.isSending) {
                 return;
@@ -149,16 +155,19 @@ export default{
 
             try {
                 this.isSending = true;
-                await axios.post(`http://localhost:3008/email`, {
-                    first_name: this.form.firstName,
-                    last_name: this.form.lastName,
-                    email: this.form.email,
-                    phone: this.form.phone,
-                    company: this.form.company,
-                    job_title: this.form.jobTitle,
-                    services: this.form.selectedOptions,
-                    message: this.form.message
-                });
+                let formData = new FormData();
+                formData.append('first_name', this.form.firstName);
+                formData.append('last_name', this.form.lastName);
+                formData.append('email', this.form.email);
+                formData.append('phone', this.form.phone);
+                formData.append('company', this.form.company);
+                formData.append('job_title', this.form.jobTitle);
+                formData.append('services', this.form.selectedOptions);
+                formData.append('message', this.form.message);
+                formData.append('file', this.form.attachment);
+
+                await axios.post(`http://localhost:3008/email`, formData);
+
                 this.fieldsClear();
                 alert("Message is sent!")
             } catch (e) {

@@ -2,12 +2,14 @@ require('dotenv').config();
 const express = require('express');
 const nodemailer = require('nodemailer');
 const cors = require('cors');
-
+const multer = require('multer');
+const upload = multer();
 const app = express();
 
 app.use(cors());
 app.use(express.urlencoded({ extended: false}));
 app.use(express.json());
+
 
 const transporter = nodemailer.createTransport({
     port: process.env.MAIL_PORT,
@@ -20,14 +22,25 @@ const transporter = nodemailer.createTransport({
 });
 
 // Email sending
-app.post('/email', (req, res) => {
+app.post('/email', upload.single('file'), async(req, res) => {
     console.log('sending')
     if (!req.body) {
       return res.status(500).send({ success: false });
     }
-  
+
     const { first_name, last_name, email, phone, company, job_title, message, services } = req.body;
-    let subject = 'The CASE Engineering - Contact Us';
+    const subject = 'The CASE Engineering - Contact Us';
+    let fileAttachment = null;
+
+    // Check if there's a file attachment
+    if (req.file) {
+        fileAttachment = [
+            {
+                filename: req.file.originalname,
+                content: req.file.buffer
+            }
+        ]
+    }
 
     const mailData = {
       from: {
@@ -40,37 +53,38 @@ app.post('/email', (req, res) => {
       html: `<table>
         <tr>
           <td>First name:</td>
-          <td>${first_name}</td>
+          <td>${first_name || ''}</td>
         </tr>
         <tr>
           <td>Last name:</td>
-          <td>${last_name}</td>
+          <td>${last_name || ''}</td>
         </tr>
         <tr>
           <td>E-mail:</td>
-          <td>${email}</td>
+          <td>${email || ''}</td>
         </tr>
         <tr>
           <td>Phone:</td>
-          <td>${phone}</td>
+          <td>${phone || ''}</td>
         </tr>
         <tr>
           <td>Company:</td>
-          <td>${company}</td>
+          <td>${company || ''}</td>
         </tr>
         <tr>
           <td>Job Title:</td>
-          <td>${job_title}</td>
+          <td>${job_title || ''}</td>
         </tr>
         <tr>
           <td>Message: </td>
-          <td>${message || null}</td>
+          <td>${message || ''}</td>
         </tr>
         <tr>
           <td>Services: </td>
-          <td>${services || null}</td>
+          <td>${services || ''}</td>
         </tr>
       </table>`,
+      attachments: fileAttachment
     };
   
     try {
