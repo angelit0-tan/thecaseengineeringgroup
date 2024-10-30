@@ -3,17 +3,14 @@
         <BgHeader>
             <div 
                 class="bg-service relative" 
-                style="background-image: url('/images/about-us-bg.jpg'), linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5))">
-                <div class="text-white md:text-7xl text-4xl font-bold md:w-1/2 w-full md:px-10 px-5 absolute text-service">
-                    
-                </div>
+                style="background-image: url('/images/about-us-bg.jpg'), linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));background-position: center;">
             </div>
         </BgHeader>
         
         <div 
             class="bg-white md:grid flex flex-col-reverse" 
             style="grid-template-columns: 75fr 25fr;">
-            <div class="md:px-20 px-5 md:py-10 py-5 text-black">
+            <div class="md:px-20 px-5 md:py-20 py-5 text-black">
                 <div class="w-11/12 mx-auto">
                     <div class="text-lg leading-9">                              
                         <p class="mb-7">                        
@@ -42,10 +39,22 @@
                 <RightMenu is-sub-page/>
             </div>
         </div>
+        <div class="w-full bg-lighblue">
+            <ContactUs
+                class="py-16 px-4">
+                <template>
+                    <div class="mb-12 text-center">
+                        <div class="mb-3 md:w-4/5 w-full mx-auto">
+                            <span class="font-bold text-3xl">Contact us today to discuss the challenges your organization is facing, and let us craft the solutions that will drive your success.</span>
+                        </div>
+                    </div>
+                </template>
+            </ContactUs>
+        </div>
     </div>
 </template>
 <script>
 export default {
-    layout: 'serviceSubPage'
+    layout: 'subPage'
 }
 </script>
