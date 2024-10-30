@@ -19,11 +19,6 @@ const transporter = nodemailer.createTransport({
     secure: false,
 });
 
-console.log(process.env.MAIL_PORT)
-console.log(process.env.MAIL_HOST)
-console.log(process.env.MAIL_USER)
-console.log(process.env.MAIL_PASSWORD)
-
 // Email sending
 app.post('/email', (req, res) => {
     console.log('sending')
@@ -31,45 +26,49 @@ app.post('/email', (req, res) => {
       return res.status(500).send({ success: false });
     }
   
-    const { firma, anrede, name, email, body } = req.body;
-    console.log(firma)
-    console.log(anrede)
-    console.log(name)
-    console.log(email)
-    console.log(body)
-    let subject = 'Steinbach Report - Kontakt';
+    const { first_name, last_name, email, phone, company, job_title, message, services } = req.body;
+    let subject = 'The CASE Engineering - Contact Us';
 
     const mailData = {
       from: {
-        name,
-        address: email
+        first_name,
+        address: process.env.MAIL_FROM
       },
       to: 'angelito.tan23@gmail.com',
-    //   cc: [
-    //     'angelito.tan23@gmail.com',
-    //   ],
       subject,
-      text: body,
+      text: message,
       html: `<table>
         <tr>
-          <td>Firma:</td>
-          <td>${firma}</td>
+          <td>First name:</td>
+          <td>${first_name}</td>
         </tr>
         <tr>
-          <td>Anrede:</td>
-          <td>${anrede}</td>
-        </tr>
-        <tr>
-          <td>Name:</td>
-          <td>${name}</td>
+          <td>Last name:</td>
+          <td>${last_name}</td>
         </tr>
         <tr>
           <td>E-mail:</td>
           <td>${email}</td>
         </tr>
         <tr>
-          <td>Mitteilung:</td>
-          <td>${body}</td>
+          <td>Phone:</td>
+          <td>${phone}</td>
+        </tr>
+        <tr>
+          <td>Company:</td>
+          <td>${company}</td>
+        </tr>
+        <tr>
+          <td>Job Title:</td>
+          <td>${job_title}</td>
+        </tr>
+        <tr>
+          <td>Message: </td>
+          <td>${message || null}</td>
+        </tr>
+        <tr>
+          <td>Services: </td>
+          <td>${services || null}</td>
         </tr>
       </table>`,
     };

@@ -10,7 +10,7 @@
                 </div>
                 
                 <div>
-                    <input type="text"/>
+                    <input type="text" v-model="form.firstName"/>
                 </div>
             </div>
             <div>
@@ -20,7 +20,7 @@
                     </label>
                 </div>
                 <div>
-                    <input type="text"/>
+                    <input type="text" v-model="form.lastName"/>
                 </div>
             </div>
             <div>
@@ -30,7 +30,7 @@
                     </label>
                 </div>
                 <div>
-                    <input type="text"/>
+                    <input type="text" v-model="form.email"/>
                 </div>
             </div>
             <div>
@@ -40,7 +40,7 @@
                     </label>
                 </div>
                 <div>
-                    <input type="text"/>
+                    <input type="text" v-model="form.phone"/>
                 </div>
             </div>
             <div>
@@ -50,7 +50,7 @@
                     </label>
                 </div>
                 <div>
-                    <input type="text"/>
+                    <input type="text" v-model="form.company"/>
                 </div>
             </div>
             <div>
@@ -60,7 +60,7 @@
                     </label>
                 </div>
                 <div>
-                    <input type="text"/>
+                    <input type="text" v-model="form.jobTitle"/>
                 </div>
             </div>
         </div>
@@ -71,7 +71,7 @@
             <div class="md:grid grid-cols-3 gap-3">
                 <div v-for="category in categories" :key="category"
                     class="flex items-center gap-2">
-                    <input type="checkbox" :id="category" :value="category" v-model="selectedOptions"/>
+                    <input type="checkbox" :id="category" :value="category" v-model="form.selectedOptions"/>
                     <label :for="category">{{ category }}</label>
                 </div>
             </div>
@@ -84,16 +84,17 @@
                     </label>
                 </div>
                 <div>
-                    <textarea class="bg-light-gray w-full" rows="6"/>
+                    <textarea class="bg-light-gray w-full" rows="6" v-model="form.message"/>
                 </div>
             </div>
         </div>
         <div class="text-center py-5">
-            <button class="px-8 py-3 text-white bg-fern"> Core Advisory Areas </button>
+            <button class="px-8 py-3 text-white bg-fern" @click="sendEmail"> Submit </button>
         </div>
     </div>
 </template>
 <script>
+import axios from 'axios';
 export default{
     data() {
         return{
@@ -121,7 +122,50 @@ export default{
                 'Requirements Management',
                 'Enterprise Architecture',
             ],
-            selectedOptions: []
+            form : {
+                firstName: null,
+                lastName: null,
+                email: null,
+                phone: null,
+                company: null,
+                jobTitle: null,
+                message: null,
+                selectedOptions: [],
+            },
+            isSending: false
+        }
+    },
+    methods: {
+        fieldsClear() {
+            for (const field in this.form) {
+                this.form[field] = null;
+            }
+        },
+
+        async sendEmail() {
+            if (this.isSending) {
+                return;
+            }
+
+            try {
+                this.isSending = true;
+                await axios.post(`http://localhost:3008/email`, {
+                    first_name: this.form.firstName,
+                    last_name: this.form.lastName,
+                    email: this.form.email,
+                    phone: this.form.phone,
+                    company: this.form.company,
+                    job_title: this.form.jobTitle,
+                    services: this.form.selectedOptions,
+                    message: this.form.message
+                });
+                this.fieldsClear();
+                alert("Message is sent!")
+            } catch (e) {
+                alert('Something went wrong.');
+            } finally {
+                this.isSending = false;
+            }
         }
     }
 }
