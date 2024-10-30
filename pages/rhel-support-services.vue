@@ -3,7 +3,7 @@
         <BgHeader>
             <div 
                 class="bg-service relative" 
-                style="background-image: url('/images/rhel-support-services-bg-1.jpeg'), linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5))">
+                style="background-image: url('/images/rhel-support-services-bg-1.jpg'), linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5))">
                 <div class="text-white md:text-7xl text-4xl font-bold md:w-1/2 w-full md:px-10 px-5 absolute text-service">
                     Red Hat Enterprise Linux Support Services
                 </div>
@@ -28,7 +28,7 @@
                         <p class="mb-7">
                             Our services encompass the full lifecycle of RHEL environments, including system design, installation, and configuration, as well as security hardening, patch management, and performance tuning. In addition to RHEL, we bring deep expertise in <strong>Red Hat Ansible Tower</strong>, enabling you to automate repetitive tasks and manage complex deployments with ease. With <strong>OpenShift</strong>, we offer container orchestration expertise, allowing you to build, deploy, and scale applications quickly across cloud and on-premises environments. By incorporating Ansible Tower’s automation capabilities and OpenShift’s container management into your RHEL architecture, we help you achieve operational efficiency, security, and agility.
                         </p>
-                        <div class="bg-[url('/images/rhel-support-services-bg-2.png')] mb-10"
+                        <div class="bg-[url('/images/rhel-support-services-bg-2.jpg')] mb-10"
                             style="background-repeat: no-repeat, repeat; background-size: cover; min-height: 50vh;background-position: center;">
                         </div>
                         <div class="text-3xl font-bold text-left md:leading-14 mb-5">

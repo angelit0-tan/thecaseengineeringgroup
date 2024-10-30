@@ -9,13 +9,16 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
+    "@nuxtjs/axios": "^5.13.6",
     "axios": "^1.7.7",
     "core-js": "^3.25.3",
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "express": "^4.21.1",
+    "multer": "^1.4.5-lts.1",
     "nodemailer": "^6.9.16",
     "nuxt": "^2.15.8",
+    "nuxt-mail": "^5.1.1",
     "vue": "^2.7.10",
     "vue-server-renderer": "^2.7.10",
     "vue-template-compiler": "^2.7.10"

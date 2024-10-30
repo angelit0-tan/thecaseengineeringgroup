@@ -3,7 +3,7 @@
         <BgHeader>
             <div 
                 class="bg-service relative" 
-                style="background-image: url('/images/program-management-bg-1.png'), linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5))">
+                style="background-image: url('/images/program-management-bg-1.jpg'), linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5))">
                 <div class="text-white md:text-7xl text-4xl font-bold md:w-1/2 w-full md:px-10 px-5 absolute text-service">
                     Program Management
                 </div>
@@ -22,7 +22,7 @@
                         <p class="mb-7">
                             Effective program management is the backbone of any successful initiative. In today’s fast-paced, technology-driven environment, managing complex programs requires a combination of strategic planning, risk management, and seamless execution. Organizations often face challenges in aligning projects with broader business goals, managing multiple stakeholders, and ensuring that projects are delivered on time and within budget. Without the right program management approach, even the most promising projects can lose momentum and fail to deliver their intended outcomes. Do you have the strategic oversight needed to turn your initiatives into success stories?
                         </p>
-                        <div class="bg-[url('/images/program-management-bg-2.png')] mb-10"
+                        <div class="bg-[url('/images/program-management-bg-2.jpg')] mb-10"
                             style="background-repeat: no-repeat, repeat; background-size: cover; min-height: 50vh;background-position: center;">
                         </div>
                         <p class="mb-7">

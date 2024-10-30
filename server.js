@@ -2,12 +2,14 @@ require('dotenv').config();
 const express = require('express');
 const nodemailer = require('nodemailer');
 const cors = require('cors');
-
+const multer = require('multer');
+const upload = multer();
 const app = express();
 
 app.use(cors());
 app.use(express.urlencoded({ extended: false}));
 app.use(express.json());
+
 
 const transporter = nodemailer.createTransport({
     port: process.env.MAIL_PORT,
@@ -19,59 +21,70 @@ const transporter = nodemailer.createTransport({
     secure: false,
 });
 
-console.log(process.env.MAIL_PORT)
-console.log(process.env.MAIL_HOST)
-console.log(process.env.MAIL_USER)
-console.log(process.env.MAIL_PASSWORD)
-
 // Email sending
-app.post('/email', (req, res) => {
+app.post('/email', upload.single('file'), async(req, res) => {
     console.log('sending')
     if (!req.body) {
       return res.status(500).send({ success: false });
     }
-  
-    const { firma, anrede, name, email, body } = req.body;
-    console.log(firma)
-    console.log(anrede)
-    console.log(name)
-    console.log(email)
-    console.log(body)
-    let subject = 'Steinbach Report - Kontakt';
+
+    const { first_name, last_name, email, phone, company, job_title, message, services } = req.body;
+    const subject = 'The CASE Engineering - Contact Us';
+    let fileAttachment = null;
+
+    // Check if there's a file attachment
+    if (req.file) {
+        fileAttachment = [
+            {
+                filename: req.file.originalname,
+                content: req.file.buffer
+            }
+        ]
+    }
 
     const mailData = {
       from: {
-        name,
-        address: email
+        first_name,
+        address: process.env.MAIL_FROM
       },
       to: 'angelito.tan23@gmail.com',
-    //   cc: [
-    //     'angelito.tan23@gmail.com',
-    //   ],
       subject,
-      text: body,
+      text: message,
       html: `<table>
         <tr>
-          <td>Firma:</td>
-          <td>${firma}</td>
+          <td>First name:</td>
+          <td>${first_name || ''}</td>
         </tr>
         <tr>
-          <td>Anrede:</td>
-          <td>${anrede}</td>
-        </tr>
-        <tr>
-          <td>Name:</td>
-          <td>${name}</td>
+          <td>Last name:</td>
+          <td>${last_name || ''}</td>
         </tr>
         <tr>
           <td>E-mail:</td>
-          <td>${email}</td>
+          <td>${email || ''}</td>
         </tr>
         <tr>
-          <td>Mitteilung:</td>
-          <td>${body}</td>
+          <td>Phone:</td>
+          <td>${phone || ''}</td>
+        </tr>
+        <tr>
+          <td>Company:</td>
+          <td>${company || ''}</td>
+        </tr>
+        <tr>
+          <td>Job Title:</td>
+          <td>${job_title || ''}</td>
+        </tr>
+        <tr>
+          <td>Message: </td>
+          <td>${message || ''}</td>
+        </tr>
+        <tr>
+          <td>Services: </td>
+          <td>${services || ''}</td>
         </tr>
       </table>`,
+      attachments: fileAttachment
     };
   
     try {

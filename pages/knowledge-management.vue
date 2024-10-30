@@ -3,7 +3,7 @@
         <BgHeader>
             <div 
                 class="bg-service relative" 
-                style="background-image: url('/images/knowledge-management-bg-1.jpeg'), linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5))">
+                style="background-image: url('/images/knowledge-management-bg-1.jpg'), linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5))">
                 <div class="text-white md:text-7xl text-4xl font-bold md:w-1/2 w-full md:px-10 px-5 absolute text-service">
                     Knowledge Management
                 </div>
@@ -28,7 +28,7 @@
                         <p class="mb-7">
                             Our knowledge management solutions are built on industry-leading platforms and best practices, ensuring that your organization’s information is securely stored, easily accessible, and continuously updated. We implement workflows and processes that streamline the creation, sharing, and updating of knowledge assets, ensuring that employees across your organization have the information they need, when they need it. Whether it’s ensuring compliance with industry regulations or improving decision-making through real-time insights, our knowledge management solutions deliver tangible results.
                         </p>
-                        <div class="bg-[url('/images/knowledge-management-bg-2.png')] mb-10"
+                        <div class="bg-[url('/images/knowledge-management-bg-2.jpg')] mb-10"
                             style="background-repeat: no-repeat, repeat; background-size: cover; min-height: 50vh;background-position: center;">
                         </div>
                         <div class="text-3xl font-bold text-left md:leading-14 mb-5">

@@ -3,7 +3,7 @@
         <BgHeader>
             <div 
                 class="bg-service relative" 
-                style="background-image: url('/images/mobile-application-development-bg-1.png'), linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5))">
+                style="background-image: url('/images/mobile-application-development-bg-1.jpg'), linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5))">
                 <div class="text-white md:text-7xl text-4xl font-bold md:w-1/2 w-full md:px-10 px-5 absolute text-service">
                     Mobile Application Development
                 </div>
@@ -28,7 +28,7 @@
                         <p class="mb-7">
                             Our mobile development process is focused on delivering apps that are intuitive, responsive, and feature-rich, while also being secure and scalable. We leverage the latest development frameworks, such as React Native, Swift, Kotlin, and Flutter, to build applications that provide a seamless user experience across all devices. Whether you’re creating a mobile extension of an existing platform, developing a new mobile product, or integrating complex backend services, we ensure that your mobile app is built to meet your users' needs and business objectives.
                         </p>
-                        <div class="bg-[url('/images/mobile-application-development-bg-2.png')] mb-10"
+                        <div class="bg-[url('/images/mobile-application-development-bg-2.jpg')] mb-10"
                             style="background-repeat: no-repeat, repeat; background-size: cover; min-height: 50vh;background-position: center;">
                         </div>
                         <div class="text-3xl font-bold text-left md:leading-14 mb-5">

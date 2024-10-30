@@ -3,7 +3,7 @@
         <BgHeader>
             <div 
                 class="bg-service relative" 
-                style="background-image: url('/images/enterprise-architecture-bg-1.png'), linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5))">
+                style="background-image: url('/images/enterprise-architecture-bg-1.jpg'), linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5))">
                 <div class="text-white md:text-7xl text-4xl font-bold md:w-1/2 w-full md:px-10 px-5 absolute text-service">
                     Enterprise Architecture
                 </div>
@@ -30,7 +30,7 @@
                         <p class="mb-7">
                             Our enterprise architecture services include current-state assessments, gap analysis, target-state design, and implementation roadmaps. We leverage industry frameworks such as TOGAF (The Open Group Architecture Framework) and Federal Enterprise Architecture (FEA) to create solutions that are not only robust but also compliant with regulatory standards. From cloud adoption to data management and cybersecurity, we take a holistic view of your IT ecosystem to ensure that every element is integrated and aligned with your organization’s goals.
                         </p>
-                        <div class="bg-[url('/images/enterprise-architecture-bg-2.png')] mb-10"
+                        <div class="bg-[url('/images/enterprise-architecture-bg-2.jpg')] mb-10"
                             style="background-repeat: no-repeat, repeat; background-size: cover; min-height: 50vh;background-position: center;">
                         </div>
                         <div class="text-3xl font-bold text-left md:leading-14 mb-5">

@@ -3,7 +3,7 @@
         <BgHeader>
             <div 
                 class="bg-service relative" 
-                style="background-image: url('/images/cyber-security-strategic-planning-bg-1.png'), linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5))">
+                style="background-image: url('/images/cyber-security-strategic-planning-bg-1.jpg'), linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5))">
                 <div class="text-white md:text-7xl text-4xl font-bold md:w-1/2 w-full md:px-10 px-5 absolute text-service">
                     Cybersecurity Strategic Planning
                 </div>
@@ -30,7 +30,7 @@
                         <p class="mb-7">
                             Our cybersecurity strategic planning process involves a thorough risk assessment, threat modeling, and a gap analysis to identify areas where your security efforts can be improved. We develop tailored strategies that address both immediate security concerns and long-term risks, helping you build a more resilient organization. With our deep expertise in industry standards such as NIST, CIS Controls, and ISO 27001, we ensure that your cybersecurity strategy meets regulatory requirements and best practices while being adaptable to the evolving threat landscape.
                         </p>
-                        <div class="bg-[url('/images/cyber-security-strategic-planning-bg-2.png')] mb-10"
+                        <div class="bg-[url('/images/cyber-security-strategic-planning-bg-2.jpg')] mb-10"
                             style="background-repeat: no-repeat, repeat; background-size: cover; min-height: 50vh;background-position: center;">
                         </div>
                         <div class="text-3xl font-bold text-left md:leading-14 mb-5">

@@ -4,7 +4,11 @@
         <site-header/>
         <Nuxt/>
         <div class="w-full bg-lighblue">
-            <ContactUs class="py-16 px-4">
+            <ContactUs
+                is-services-required
+                is-company-required
+                is-job-title-required
+                class="py-16 px-4">
                 <template>
                     <div class="mb-12 text-center">
                         <div class="mb-3">

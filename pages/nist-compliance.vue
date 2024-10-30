@@ -3,7 +3,7 @@
         <BgHeader>
             <div 
                 class="bg-service relative" 
-                style="background-image: url('/images/nist-compliance-bg-1.jpeg'), linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5))">
+                style="background-image: url('/images/nist-compliance-bg-1.jpg'), linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5))">
                 <div class="text-white md:text-7xl text-4xl font-bold md:w-1/2 w-full md:px-10 px-5 absolute text-service">
                     NIST Compliance
                 </div>
@@ -28,7 +28,7 @@
                         <p class="mb-7">
                             We offer end-to-end NIST compliance services, from gap analysis and risk assessments to the implementation of required security controls and continuous monitoring. Our expertise spans keyareas such as access control, incident response, system integrity, and audit logging, ensuring that your security posture meets NIST standards and is capable of evolving as new threats and regulatory requirements emerge. By leveraging our extensive experience with government agencies like the IRS and the Department of Treasury, we deliver NIST compliance solutions that not only meet federal guidelines but also enhance overall security.
                         </p>
-                        <div class="bg-[url('/images/nist-compliance-bg-2.png')] mb-10"
+                        <div class="bg-[url('/images/nist-compliance-bg-2.jpg')] mb-10"
                             style="background-repeat: no-repeat, repeat; background-size: cover; min-height: 50vh;background-position: center;">
                         </div>
                         <div class="text-3xl font-bold text-left md:leading-14 mb-5">
