@@ -4,10 +4,10 @@
         <site-header/>
         <Nuxt/>
         <div class="w-full bg-lighblue">
-            <ContactUs class="py-16">
+            <ContactUs class="py-16 px-4">
                 <template>
-                    <div class="mb-10">
-                        <div>
+                    <div class="mb-12 text-center">
+                        <div class="mb-3">
                             <span class="font-bold text-3xl">Contact Us</span>
                         </div>
                         <div>

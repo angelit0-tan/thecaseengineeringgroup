@@ -1,7 +1,7 @@
 <template>
     <div class="container mx-auto">
         <slot/>
-        <div class="grid grid-cols-2 gap-x-8 gap-y-5 mb-10">
+        <div class="md:grid grid-cols-2 gap-x-8 gap-y-5 mb-10">
             <div>
                 <div class="mb-1">
                     <label>
@@ -66,9 +66,9 @@
         </div>
         <div class="mb-10">
             <p class="mb-5">
-                Which services are you interested in? (Please select atleast one)<span class="text-red">*</span>
+                Which services are you interested in? (Please select atleast one) <span class="text-red">*</span>
             </p>
-            <div class="grid grid-cols-3 gap-3">
+            <div class="md:grid grid-cols-3 gap-3">
                 <div v-for="category in categories" :key="category"
                     class="flex items-center gap-2">
                     <input type="checkbox" :id="category" :value="category" v-model="selectedOptions"/>
