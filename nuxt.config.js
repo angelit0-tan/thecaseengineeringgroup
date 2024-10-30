@@ -43,6 +43,21 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    '@nuxtjs/axios',
+    ['nuxt-mail', {
+      message: {
+        to: 'angelito.tan23@gmail.com',
+      },
+      smtp: {
+        host: process.env.MAIL_HOST,
+        port: process.env.MAIL_PORT,
+        auth: {
+          user: process.env.MAIL_USER,
+          pass: process.env.MAIL_PASSWORD,
+        },
+        secure: false,
+      },
+    }],
   ],
 
   // Tailwind

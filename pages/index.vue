@@ -37,7 +37,7 @@
             North American Industry Classification System <br/>(NAICS) and Business Classification
           </div>
           <div class="flex flex-wrap justify-center gap-y-20 gap-x-8 text-white text-center w-4/5 mx-auto text-xl font-bold text-balance leading-11">
-            <div class="bg-black rounded-lg p-6 w-96 "
+            <div class="bg-black rounded-lg p-6 w-80"
               v-for="industry in industries" :key="industry.id">
               <a :href="industry.link" target="_blank" class="flex flex-col h-full">
                 <div>

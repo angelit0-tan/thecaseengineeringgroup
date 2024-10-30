@@ -7,8 +7,10 @@
                     <label>
                         First Name <span class="text-red">*</span>
                     </label>
+                    <span class="text-red" v-if="errors.firstName.value">
+                        Required field
+                    </span>
                 </div>
-                
                 <div>
                     <input type="text" v-model="form.firstName"/>
                 </div>
@@ -18,6 +20,9 @@
                     <label>
                         Last Name <span class="text-red">*</span>
                     </label>
+                    <span class="text-red" v-if="errors.lastName.value">
+                        Required field
+                    </span>
                 </div>
                 <div>
                     <input type="text" v-model="form.lastName"/>
@@ -28,6 +33,9 @@
                     <label>
                         Email Address <span class="text-red">*</span>
                     </label>
+                    <span class="text-red" v-if="errors.email.value">
+                        Required field
+                    </span>
                 </div>
                 <div>
                     <input type="text" v-model="form.email"/>
@@ -38,41 +46,53 @@
                     <label>
                         Phone <span class="text-red">*</span>
                     </label>
+                    <span class="text-red" v-if="errors.phone.value">
+                        Required field
+                    </span>
                 </div>
                 <div>
                     <input type="text" v-model="form.phone"/>
                 </div>
             </div>
-            <div>
+            <div v-if="isCompanyRequired">
                 <div class="mb-1">
                     <label>
                         Agency / Company Name <span class="text-red">*</span>
                     </label>
+                    <span class="text-red" v-if="errors.company.value">
+                        Required field
+                    </span>
                 </div>
                 <div>
                     <input type="text" v-model="form.company"/>
                 </div>
             </div>
-            <div>
+            <div v-if="isJobTitleRequired">
                 <div class="mb-1">
                     <label>
                         Job Title <span class="text-red">*</span>
                     </label>
+                    <span class="text-red" v-if="errors.jobTitle.value">
+                        Required field
+                    </span>
                 </div>
                 <div>
                     <input type="text" v-model="form.jobTitle"/>
                 </div>
             </div>
         </div>
-        <div class="mb-10">
+        <div class="mb-10" v-if="isServicesRequired">
             <p class="mb-5">
                 Which services are you interested in? (Please select atleast one) <span class="text-red">*</span>
+                <span class="text-red" v-if="errors.selectedOptions.value">
+                    Required field
+                </span>
             </p>
             <div class="md:grid grid-cols-3 gap-3">
-                <div v-for="category in categories" :key="category"
+                <div v-for="(category, idx) in categories" :key="idx"
                     class="flex items-center gap-2">
-                    <input type="checkbox" :id="category" :value="category" v-model="form.selectedOptions"/>
-                    <label :for="category">{{ category }}</label>
+                    <input type="checkbox" :id="`${category}-${idx}`" :value="category" v-model="form.selectedOptions"/>
+                    <label :for="`${category}-${idx}`">{{ category }}</label>
                 </div>
             </div>
         </div>
@@ -82,23 +102,47 @@
                     <label>
                         Message / Comment <span class="text-red">*</span>
                     </label>
+                    <span class="text-red" v-if="errors.message.value">
+                        Required field
+                    </span>
                 </div>
                 <div>
                     <textarea class="bg-light-gray w-full px-3 py-2" rows="6" v-model="form.message"/>
                 </div>
             </div>
         </div>
-        <div>
+        <div v-if="isAttachmentRequired">
             <input type="file" @change="handleFileUpload">
         </div>
         <div class="text-center py-5">
-            <button class="px-8 py-3 text-white bg-fern" @click="sendEmail"> Submit </button>
+            <div v-if="hasRequired" class="text-red mb-5">
+                Please check the required field.
+            </div>
+            <button class="px-8 py-3 text-white bg-fern" :disabled="isSending" @click="sendEmail"> Submit </button>
         </div>
     </div>
 </template>
 <script>
 import axios from 'axios';
-export default{
+export default {
+    props:{
+        isAttachmentRequired: {
+            type: Boolean,
+            default: false
+        },
+        isCompanyRequired:{
+            type: Boolean,
+            default: false
+        },
+        isJobTitleRequired:{
+            type: Boolean,
+            default: false
+        },
+        isServicesRequired: {
+            type: Boolean,
+            default: false
+        }
+    },
     data() {
         return{
             categories: [
@@ -136,7 +180,52 @@ export default{
                 attachment: null,
                 selectedOptions: [],
             },
-            isSending: false
+            errors: {
+                firstName: {
+                    validate: true,
+                    value: null
+                },
+                lastName: {
+                    validate: true,
+                    value: null
+                },
+                email: {
+                    validate: true,
+                    value: null
+                },
+                phone: {
+                    validate: true,
+                    value: null
+                },
+                company: {
+                    validate: this.isCompanyRequired,
+                    value: null
+                },
+                jobTitle: {
+                    validate: this.isJobTitleRequired,
+                    value: null
+                },
+                selectedOptions: {
+                    validate: this.isServicesRequired,
+                    value: null
+                },
+                attachment: {
+                    validate: this.isAttachmentRequired,
+                    value: null
+                },
+                message: {
+                    validate: true,
+                    value: null
+                },
+            },
+            isSending: false,
+            emailData: {
+                to: 'recipient@example.com',
+                subject: 'Subject Here',
+                text: 'Email body here',
+                attachments: [],
+            },
+            hasRequired: false
         }
     },
     methods: {
@@ -148,30 +237,89 @@ export default{
         handleFileUpload(event) {
             this.form.attachment = event.target.files[0];
         },
+        fieldsCheck() {
+            for (const error in this.errors) {
+                if (this.errors[error].validate) {
+                    if (!this.form[error]) {
+                        this.errors[error].value = 'required';
+                        this.hasRequired = true;
+                        return false
+                    }else {
+                        this.errors[error].value = null;
+                    }
+                }
+            }
+            this.hasRequired = false;
+            return true;
+        },
         async sendEmail() {
             if (this.isSending) {
                 return;
             }
 
+            if (!this.fieldsCheck()) return;
+
             try {
                 this.isSending = true;
-                let formData = new FormData();
-                formData.append('first_name', this.form.firstName);
-                formData.append('last_name', this.form.lastName);
-                formData.append('email', this.form.email);
-                formData.append('phone', this.form.phone);
-                formData.append('company', this.form.company);
-                formData.append('job_title', this.form.jobTitle);
-                formData.append('services', this.form.selectedOptions);
-                formData.append('message', this.form.message);
-                formData.append('file', this.form.attachment);
+                // let formData = new FormData();
+                // formData.append('first_name', this.form.firstName);
+                // formData.append('last_name', this.form.lastName);
+                // formData.append('email', this.form.email);
+                // formData.append('phone', this.form.phone);
+                // formData.append('company', this.form.company);
+                // formData.append('job_title', this.form.jobTitle);
+                // formData.append('services', this.form.selectedOptions);
+                // formData.append('message', this.form.message);
+                // formData.append('file', this.form.attachment);
 
-                await axios.post(`http://localhost:3008/email`, formData);
+                // await axios.post(`http://localhost:3008/email`, formData);
+                
+                this.$mail.send({
+                    from: { 
+                        name: this.form.firstName ,
+                        address: 'support@perfectfriends.com'
+                    },
+                    subject: 'Incredible',
+                    html: `<table>
+                        <tr>
+                        <td>First name:</td>
+                        <td>${this.form.firstName || ''}</td>
+                        </tr>
+                        <tr>
+                            <td>Last name:</td>
+                            <td>${this.form.lastName || ''}</td>
+                        </tr>
+                        <tr>
+                            <td>E-mail:</td>
+                            <td>${this.form.email || ''}</td>
+                        </tr>
+                        <tr>
+                            <td>Phone:</td>
+                            <td>${this.form.phone || ''}</td>
+                        </tr>
+                        <tr>
+                            <td>Company:</td>
+                            <td>${this.form.company || ''}</td>
+                        </tr>
+                        <tr>
+                            <td>Job Title:</td>
+                            <td>${this.form.jobTitle || ''}</td>
+                        </tr>
+                        <tr>
+                            <td>Message: </td>
+                            <td>${this.form.message || ''}</td>
+                        </tr>
+                        <tr>
+                            <td>Services: </td>
+                            <td>${this.form.selectedOptions || ''}</td>
+                        </tr>
+                    </table>`,
+                });
 
                 this.fieldsClear();
                 alert("Message is sent!")
             } catch (e) {
-                alert('Something went wrong.');
+                console.log(e)
             } finally {
                 this.isSending = false;
             }
