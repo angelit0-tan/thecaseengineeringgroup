@@ -3,7 +3,7 @@
         <BgHeader>
             <div 
                 class="bg-service relative" 
-                style="background-image: url('/images/software-development-bg-1.jpeg'), linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5))">
+                style="background-image: url('/images/software-development-bg-1.jpg'), linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5))">
                 <div class="text-white md:text-7xl text-4xl font-bold md:w-1/2 w-full md:px-10 px-5 absolute text-service">
                     Software Development
                 </div>
@@ -30,7 +30,7 @@
                         <p class="mb-7">
                             Our software development services cover the full lifecycle, from requirements gathering and design to coding, testing, and ongoing support. We leverage modern development frameworks, including Agile and DevOps practices, to ensure that your software is delivered quickly and efficiently while maintaining the highest standards of quality. Whether you’re developing web applications, mobile apps, or enterprise-level systems, we provide solutions that are scalable, secure, and built for the future
                         </p>
-                        <div class="bg-[url('/images/software-development-bg-2.png')] mb-10"
+                        <div class="bg-[url('/images/software-development-bg-2.jpg')] mb-10"
                             style="background-repeat: no-repeat, repeat; background-size: cover; min-height: 50vh;background-position: center;">
                         </div>
                         <div class="text-3xl font-bold text-left md:leading-14 mb-5">

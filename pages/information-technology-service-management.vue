@@ -3,7 +3,7 @@
         <BgHeader>
             <div 
                 class="bg-service relative" 
-                style="background-image: url('/images/information-technology-service-management-bg-1.jpeg'), linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5))">
+                style="background-image: url('/images/information-technology-service-management-bg-1.jpg'), linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5))">
                 <div class="text-white md:text-7xl text-4xl font-bold md:w-1/2 w-full md:px-10 px-5 absolute text-service">
                     ITSM Service Delivery
                 </div>
@@ -28,7 +28,7 @@
                         <p class="mb-7">
                             Our ITIL service delivery approach is focused on providing measurable value to your organization. By implementing structured workflows, automating routine processes, and ensuring clear communication between IT and business stakeholders, we help you reduce downtime, minimize service disruptions, and improve the overall user experience. Whether you're looking to improve your incident response times, manage changes more effectively, or enhance service-level management, our ITIL-certified experts are equipped to deliver the results you need.
                         </p>
-                        <div class="bg-[url('/images/information-technology-service-management-bg-2.png')] mb-10"
+                        <div class="bg-[url('/images/information-technology-service-management-bg-2.jpg')] mb-10"
                             style="background-repeat: no-repeat, repeat; background-size: cover; min-height: 50vh;background-position: center;">
                         </div>
                         <div class="text-3xl font-bold text-left md:leading-14 mb-5">

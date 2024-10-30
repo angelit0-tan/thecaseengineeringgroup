@@ -28,7 +28,7 @@
                         <p class="mb-7">
                             Our approach is rooted in a deep understanding of both business operations and technology. We work closely with your stakeholders to ensure that business objectives are clearly defined and aligned with technical capabilities. Using industry-standard methodologies such as Agile and SixSigma, we deliver comprehensive business analysis solutions that not only identify pain points but also provide actionable recommendations for improvement. Whether it’s optimizing workflows, improving customer experience, or driving innovation, our business analysis services are designed to deliver measurable value to your organization.
                         </p>
-                        <div class="bg-[url('/images/business-analysis-bg-2.png')] mb-10"
+                        <div class="bg-[url('/images/business-analysis-bg-2.jpg')] mb-10"
                             style="background-repeat: no-repeat, repeat; background-size: cover; min-height: 50vh;background-position: center;">
                         </div>
                         <div class="text-3xl font-bold text-left md:leading-14 mb-5">

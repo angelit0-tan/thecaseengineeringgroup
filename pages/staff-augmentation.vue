@@ -3,7 +3,7 @@
         <BgHeader>
             <div 
                 class="bg-service relative" 
-                style="background-image: url('/images/staff-augmentation-bg-1.png'), linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5))">
+                style="background-image: url('/images/staff-augmentation-bg-1.jpg'), linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5))">
                 <div class="text-white md:text-7xl text-4xl font-bold md:w-1/2 w-full md:px-10 px-5 absolute text-service">
                     Staff Augmentation
                 </div>
@@ -28,7 +28,7 @@
                         <p class="mb-7">
                             Our staff augmentation services are tailored to fit your specific needs, ensuring that the professionals we provide seamlessly integrate into your existing team and workflows. We work closely with you to understand the scope of your project and the skills required, allowing us to deliver the right expertise at the right time. From IT infrastructure projects to cloud migrations and cybersecurity initiatives, our team members are equipped with the knowledge and experience to contribute immediately, helping you meet deadlines, improve performance, and achieve project success
                         </p>
-                        <div class="bg-[url('/images/staff-augmentation-bg-2.png')] mb-10"
+                        <div class="bg-[url('/images/staff-augmentation-bg-2.jpg')] mb-10"
                             style="background-repeat: no-repeat, repeat; background-size: cover; min-height: 50vh;background-position: center;">
                         </div>
                         <div class="text-3xl font-bold text-left md:leading-14 mb-5">

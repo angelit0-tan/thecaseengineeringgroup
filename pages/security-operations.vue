@@ -3,7 +3,7 @@
         <BgHeader>
             <div 
                 class="bg-service relative" 
-                style="background-image: url('/images/security-operations-bg-1.png'), linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5))">
+                style="background-image: url('/images/security-operations-bg-1.jpg'), linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5))">
                 <div class="text-white md:text-7xl text-4xl font-bold md:w-1/2 w-full md:px-10 px-5 absolute text-service">
                     Security Operations
                 </div>
@@ -28,7 +28,7 @@
                         <p class="mb-7">
                             Our Security Operations Center (SOC) provides around-the-clock monitoring and analysis, enabling us to detect suspicious activities, respond to security incidents, and minimize potential risks in real-time. We follow best practices aligned with industry standards such as NIST and CIS, ensuring that our services are not only robust but also compliant with regulatory requirements. Whether you're facing external attacks like malware and phishing or internal risks such as misconfigurations and insider threats, C.A.S.E. delivers the visibility, response, and remediation required to safeguard your organization.
                         </p>
-                        <div class="bg-[url('/images/security-operations-bg-2.png')] mb-10"
+                        <div class="bg-[url('/images/security-operations-bg-2.jpg')] mb-10"
                             style="background-repeat: no-repeat, repeat; background-size: cover; min-height: 50vh;background-position: center;">
                         </div>
                         <div class="text-3xl font-bold text-left md:leading-14 mb-5">
