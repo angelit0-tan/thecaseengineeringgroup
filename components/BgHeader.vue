@@ -24,4 +24,5 @@
         transform: translate(-70%, -50%)
     }
 }
+
 </style>

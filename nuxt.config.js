@@ -56,6 +56,7 @@ export default {
           'green' : '#008000',
           'darkgreen' : '#006400',
           'blue': '#0000ff',
+          'darkblue': '#003585',
         },
         fontFamily: {
           sans: ['InterVariable'],
@@ -71,7 +72,11 @@ export default {
             '14': '3.5rem',
             '15': '3.75rem',
           },
-        }
+          spacing: {
+            '101': '31rem',
+            '108': '38rem',
+          },
+        },
       },
       variants: {
         extend: {
