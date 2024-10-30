@@ -50,12 +50,16 @@ export default {
     config: {
       theme: {
         colors: {
+          'red'   : '#FF0000',
           'black' : '#000000',
           'white': '#ffffff',
           'fern': '#5DBB63',
+          'light-gray': '#EEEEEE',
+          'gray': '#cccccc',
           'green' : '#008000',
           'darkgreen' : '#006400',
           'blue': '#0000ff',
+          'lighblue': '#F4FBFF',
           'darkblue': '#003585',
         },
         fontFamily: {
