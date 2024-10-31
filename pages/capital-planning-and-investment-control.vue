@@ -3,7 +3,7 @@
         <BgHeader>
             <div 
                 class="bg-service relative" 
-                style="background-image: url('/images/capital-planning-and-investment-control-bg-1.jpg'), linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5))">
+                style="background-image: url('/images/capital-planning-and-investment-control-bg-1.jpg'), linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));background-position: center;">
                 <div class="text-white md:text-7xl text-4xl font-bold md:w-1/2 w-full md:px-10 px-5 absolute text-service">
                     Capital Planning and Investment Control 
                 </div>
@@ -46,7 +46,7 @@
                 </div>
             </div>
             <div class="bg-black py-10">
-                <div class="text-white text-3xl font-bold px-10">
+                <div class="text-white md:text-3xl text-xl font-bold px-10">
                     Core Advisory and Assistance Service Areas
                 </div>
                 <div>

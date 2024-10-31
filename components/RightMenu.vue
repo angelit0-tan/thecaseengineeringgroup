@@ -4,8 +4,8 @@
         :class="{'flex-col' : isSubPage}">
         <button
             v-for="(menu, index) in menus.sort((a,b)=> a.order - b.order)" :key="menu.link"
-            class="px-4 py-3 text-black rounded-full flex items-center gap-2 hover:bg-darkgreen hover:text-white transition delay-75 duration-200 w-fit"
-            :class="index === 0 ? 'bg-darkgreen text-white' : 'bg-white'">
+            class="md:px-4 md:py-3 p-2 rounded-full flex items-center gap-2 hover:bg-darkgreen hover:text-white transition delay-75 duration-200 w-fit"
+            :class="index === 0 ? 'bg-darkgreen text-white' : 'bg-white text-black'">
             <img src="/images/add.png"/>
             <NuxtLink :to="menu.link" @click="menuOrder">
                 <span> {{  menu.name }} - {{ menu.order }}</span>

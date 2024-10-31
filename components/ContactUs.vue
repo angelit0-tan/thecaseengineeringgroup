@@ -121,7 +121,7 @@
             <div v-if="hasRequired" class="text-red mb-5">
                 Please check the required field.
             </div>
-            <button class="px-8 py-3 text-black bg-fern font-bold" :disabled="isSending" @click="sendEmail"> Submit </button>
+            <button class="px-10 py-3 text-black bg-fern font-bold" :disabled="isSending" @click="sendEmail"> Submit </button>
         </div>
     </div>
 </template>
