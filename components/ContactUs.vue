@@ -112,13 +112,16 @@
             </div>
         </div>
         <div v-if="isAttachmentRequired">
+            <div>
+                Upload Attachment or Resume <span class="text-red"> *</span>
+            </div>
             <input type="file" @change="handleFileUpload">
         </div>
         <div class="text-center py-5">
             <div v-if="hasRequired" class="text-red mb-5">
                 Please check the required field.
             </div>
-            <button class="px-8 py-3 text-white bg-fern" :disabled="isSending" @click="sendEmail"> Submit </button>
+            <button class="px-8 py-3 text-black bg-fern font-bold" :disabled="isSending" @click="sendEmail"> Submit </button>
         </div>
     </div>
 </template>

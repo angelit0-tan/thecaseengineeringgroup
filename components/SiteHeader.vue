@@ -7,10 +7,11 @@
         </div>
         <div>
             <ul class="flex gap-3 text-white items-center">
-                <li>Menu 1</li>
-                <li>Menu 2</li>
-                <li>Menu 3</li>
-                <li>Menu 4</li>
+                <li>Home</li>
+                <li>About Us</li>
+                <li>Advisory and Assitance Service Areas</li>
+                <li>Join Our Team</li>
+                <li>Contact Us</li>
             </ul>
         </div>
     </div>
