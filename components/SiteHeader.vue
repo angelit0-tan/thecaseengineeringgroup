@@ -7,7 +7,7 @@
                 </a>
             </div>
             <div class="main-nav">
-                <ul class="flex md:flex-row flex-col gap-10 md:text-white text-black items-center font-bold nav-lists">
+                <ul class="flex md:flex-row md:text-lg text-xl flex-col gap-10 md:text-white text-black items-center font-bold nav-lists">
                     <li @click="toggle">
                         <NuxtLink to="/">
                             Home
@@ -205,7 +205,7 @@ export default {
         background-color: rgba(255, 255, 255, 0.9);
         -webkit-backdrop-filter: blur(5px);
         backdrop-filter: blur(10px);
-        position: absolute;
+        position: fixed;
         top: 0;
         left: 0;
         width: 100%;

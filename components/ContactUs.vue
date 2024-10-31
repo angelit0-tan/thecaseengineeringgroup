@@ -7,7 +7,7 @@
                     <label>
                         First Name <span class="text-red">*</span>
                     </label>
-                    <span class="text-red" v-if="errors.firstName.value">
+                    <span class="text-red text-sm" v-if="errors.firstName.value">
                         Required field
                     </span>
                 </div>
@@ -20,7 +20,7 @@
                     <label>
                         Last Name <span class="text-red">*</span>
                     </label>
-                    <span class="text-red" v-if="errors.lastName.value">
+                    <span class="text-red text-sm" v-if="errors.lastName.value">
                         Required field
                     </span>
                 </div>
@@ -33,7 +33,7 @@
                     <label>
                         Email Address <span class="text-red">*</span>
                     </label>
-                    <span class="text-red" v-if="errors.email.value">
+                    <span class="text-red text-sm" v-if="errors.email.value">
                         Required field
                     </span>
                 </div>
@@ -46,7 +46,7 @@
                     <label>
                         Phone <span class="text-red">*</span>
                     </label>
-                    <span class="text-red" v-if="errors.phone.value">
+                    <span class="text-red text-sm" v-if="errors.phone.value">
                         Required field
                     </span>
                 </div>
@@ -59,7 +59,7 @@
                     <label>
                         Agency / Company Name <span class="text-red">*</span>
                     </label>
-                    <span class="text-red" v-if="errors.company.value">
+                    <span class="text-red text-sm" v-if="errors.company.value">
                         Required field
                     </span>
                 </div>
@@ -72,7 +72,7 @@
                     <label>
                         Job Title <span class="text-red">*</span>
                     </label>
-                    <span class="text-red" v-if="errors.jobTitle.value">
+                    <span class="text-red text-sm" v-if="errors.jobTitle.value">
                         Required field
                     </span>
                 </div>
@@ -84,7 +84,7 @@
         <div class="mb-10" v-if="isServicesRequired">
             <p class="mb-5">
                 Which services are you interested in? (Please select atleast one) <span class="text-red">*</span>
-                <span class="text-red" v-if="errors.selectedOptions.value">
+                <span class="text-red text-sm" v-if="errors.selectedOptions.value">
                     Required field
                 </span>
             </p>
@@ -102,7 +102,7 @@
                     <label>
                         Message / Comment <span class="text-red">*</span>
                     </label>
-                    <span class="text-red" v-if="errors.message.value">
+                    <span class="text-red text-sm" v-if="errors.message.value">
                         Required field
                     </span>
                 </div>
@@ -114,6 +114,9 @@
         <div v-if="isAttachmentRequired">
             <div>
                 Upload Attachment or Resume <span class="text-red"> *</span>
+                <span class="text-red text-sm" v-if="errors.attachment.value">
+                    Required field
+                </span>
             </div>
             <input type="file" @change="handleFileUpload">
         </div>
@@ -212,12 +215,12 @@ export default {
                     validate: this.isServicesRequired,
                     value: null
                 },
-                attachment: {
-                    validate: this.isAttachmentRequired,
-                    value: null
-                },
                 message: {
                     validate: true,
+                    value: null
+                },
+                attachment: {
+                    validate: this.isAttachmentRequired,
                     value: null
                 },
             },
