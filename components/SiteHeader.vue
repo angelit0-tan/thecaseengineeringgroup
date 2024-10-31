@@ -7,7 +7,7 @@
                 </a>
             </div>
             <div class="main-nav">
-                <ul class="flex md:flex-row flex-col gap-10 md:text-white text-black items-center font-bold nav-lists">
+                <ul class="flex md:flex-row md:text-lg text-xl flex-col gap-10 md:text-white text-black items-center font-bold nav-lists">
                     <li @click="toggle">
                         <NuxtLink to="/">
                             Home
