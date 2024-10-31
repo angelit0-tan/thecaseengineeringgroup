@@ -19,9 +19,26 @@
                         </NuxtLink>
                     </li>
                     <li class="md:block hidden">
-                        <NuxtLink to="/">
+                        <button>                            
                             Advisory and Assitance Service Areas
-                        </NuxtLink>
+                        </button>
+                        <template>
+                            <div class="bg-white text-black p-5">
+                                <div class="border-b">All Topics</div>
+                                <div class="grid grid-cols-3 grid-rows-7">
+                                    <div
+                                    v-for="menu in menus" :key="menu.link"
+                                    class="bg-white text-black"
+                                    >
+                                        <NuxtLink :to="menu.link">
+                                            {{  menu.name }}
+                                        </NuxtLink>
+                                    </div>
+                                </div>
+                            </div>
+                        </template>
+                        <!-- <NuxtLink to="/">
+                        </NuxtLink> -->
                     </li>
                     <li @click="toggle">
                         <NuxtLink to="/join-our-team" :activeClass="'text-green'">
@@ -59,7 +76,116 @@
 export default {
     data() {
         return {
-            isOpen: false
+            isOpen: false,
+            menus: [{
+                        name: 'Program Support Services',
+                        link: 'program-support-services',
+                        order: 1,
+                    },{
+                        name: 'Cybersecurity',
+                        link: 'cyber-security',
+                        order: 1,
+                    },{
+                        name: 'Zero Trust Security',
+                        link: 'zero-trust-security',
+                        order: 1,
+                    },
+                    {
+                        name: 'Cloud Security',
+                        link: 'cloud-security',
+                        order: 1,
+                    },
+                    {
+                        name: 'Network Operations',
+                        link: 'network-operations',
+                        order: 1,
+                    },
+                    {
+                        name: 'Red Hat Enterprise Linux (RHEL) Support Services',
+                        link: 'rhel-support-services',
+                        order: 1,
+                    },
+                    {
+                        name: 'Knowledge Management',
+                        link: 'knowledge-management',
+                        order: 1,
+                    },
+                    {
+                        name: 'Risk Management',
+                        link: 'risk-management',
+                        order: 1,
+                    },
+                    {
+                        name: 'Cloud Computing',
+                        link: 'cloud-computing',
+                        order: 1,
+                    },
+                    {
+                        name: 'Web Development',
+                        link: 'web-development',
+                        order: 1,
+                    },
+                    {
+                        name: 'Program Management',
+                        link: 'program-management',
+                        order: 1,
+                    },
+                    {
+                        name: 'Mobile Application Development',
+                        link: 'mobile-application-development',
+                        order: 1,
+                    },
+                    {
+                        name: 'Staff Augmentation',
+                        link: 'staff-augmentation',
+                        order: 1,
+                    },
+                    {
+                        name: 'Cybersecurity Strategic Planning',
+                        link: 'cyber-security-strategic-planning',
+                        order: 1,
+                    },
+                    {
+                        name: 'Business Analysis',
+                        link: 'business-analysis',
+                        order: 1,
+                    },
+                    {
+                        name: 'Software Development',
+                        link: 'software-development',
+                        order: 1,
+                    },
+                    {
+                        name: 'Information Technology Service Management (ITSM)',
+                        link: 'information-technology-service-management',
+                        order: 1,
+                    },
+                    {
+                        name: 'Security Operations',
+                        link: 'security-operations',
+                        order: 1,
+                    },
+                    {
+                        name: 'NIST Compliance',
+                        link: 'nist-compliance',
+                        order: 1,
+                    },
+                    {
+                        name: 'Capital Planning and Investment Control',
+                        link: 'capital-planning-and-investment-control',
+                        order: 1,
+                    },
+                    {
+                        name: 'Requirements Management',
+                        link: 'requirements-management',
+                        order: 1,
+                    },
+                    {
+                        name: 'Enterprise Architecture',
+                        link: 'enterprise-architecture',
+                        order: 1,
+                    },
+                ],
         }
     },
     methods: {
