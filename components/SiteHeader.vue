@@ -19,9 +19,27 @@
                         </NuxtLink>
                     </li>
                     <li class="md:block hidden">
-                        <NuxtLink to="/">
+                        <button @click="toggleMenu">                            
                             Advisory and Assitance Service Areas
-                        </NuxtLink>
+                        </button>
+                        <template v-if="isMenuVisible">
+                            <div class="bg-white text-black p-5 w-max absolute right-1.5 rounded-md box">
+                                <div class="border-b text-2xl mb-3 pb-2">Capabilities</div>
+                                <div class="grid grid-cols-4 grid-rows-7 grid-flow-col grid-cols-none text-base font-normal"
+                                 
+                                 >
+                                    <!-- <div class="flex flex-cols-4 flex-rows-7 flex-flow-col-dense text-base font-normal"> -->
+                                    <div
+                                    v-for="menu in menus" :key="menu.link"
+                                    class="bg-white text-black pr-4 pt-3 grid-item" @click="toggleMenu"
+                                    >
+                                        <NuxtLink :to="menu.link">
+                                            {{  menu.name }}
+                                        </NuxtLink>
+                                    </div>
+                                </div>
+                            </div>
+                        </template>
                     </li>
                     <li @click="toggle">
                         <NuxtLink to="/join-our-team" :activeClass="'text-green'">
@@ -59,13 +77,129 @@
 export default {
     data() {
         return {
-            isOpen: false
+            isOpen: false,
+            isMenuVisible: false,
+            menus: [{
+                        name: 'Cybersecurity',
+                        link: 'cyber-security',
+                        order: 1,
+                    },
+                    {
+                        name: 'Zero Trust Security',
+                        link: 'zero-trust-security',
+                        order: 1,
+                    },
+                    {
+                        name: 'Cloud Security',
+                        link: 'cloud-security',
+                        order: 1,
+                    },
+                    {
+                        name: 'Network Operations',
+                        link: 'network-operations',
+                        order: 1,
+                    },
+                    {
+                        name: 'Red Hat Enterprise Linux Services',
+                        link: 'rhel-support-services',
+                        order: 1,
+                    },
+                    {
+                        name: 'Program Management',
+                        link: 'program-management',
+                        order: 1,
+                    },
+                    {
+                        name: 'Knowledge Management',
+                        link: 'knowledge-management',
+                        order: 1,
+                    },
+                    {
+                        name: 'Risk Management',
+                        link: 'risk-management',
+                        order: 1,
+                    },
+                    {
+                        name: 'Cloud Computing',
+                        link: 'cloud-computing',
+                        order: 1,
+                    },
+                    {
+                        name: 'Web Development',
+                        link: 'web-development',
+                        order: 1,
+                    },
+                    {
+                        name: 'Program Support Services',
+                        link: 'program-support-services',
+                        order: 1,
+                    },
+                    {
+                        name: 'Mobile Application Development',
+                        link: 'mobile-application-development',
+                        order: 1,
+                    },
+                    {
+                        name: 'Staff Augmentation',
+                        link: 'staff-augmentation',
+                        order: 1,
+                    },
+                    {
+                        name: 'Cybersecurity Strategic Planning',
+                        link: 'cyber-security-strategic-planning',
+                        order: 1,
+                    },
+                    {
+                        name: 'Business Analysis',
+                        link: 'business-analysis',
+                        order: 1,
+                    },
+                    {
+                        name: 'Software Development',
+                        link: 'software-development',
+                        order: 1,
+                    },
+                    {
+                        name: 'Information Technology Service Management (ITSM)',
+                        link: 'information-technology-service-management',
+                        order: 1,
+                    },
+                    {
+                        name: 'Security Operations',
+                        link: 'security-operations',
+                        order: 1,
+                    },
+                    {
+                        name: 'NIST Compliance',
+                        link: 'nist-compliance',
+                        order: 1,
+                    },
+                    {
+                        name: 'Capital Planning and Investment Control',
+                        link: 'capital-planning-and-investment-control',
+                        order: 1,
+                    },
+                    {
+                        name: 'Requirements Management',
+                        link: 'requirements-management',
+                        order: 1,
+                    },
+                    {
+                        name: 'Enterprise Architecture',
+                        link: 'enterprise-architecture',
+                        order: 1,
+                    },
+                ],
         }
     },
     methods: {
         toggle() {
             this.isOpen = !this.isOpen;
-        }
+        },
+        toggleMenu() {
+            this.isMenuVisible = !this.isMenuVisible;
+        },
+
     }
 }
 </script>
@@ -110,5 +244,22 @@ export default {
       pointer-events: auto;
       visibility: visible;
       transform: translateX(0);
+    }
+
+    .box {
+      padding: 20px; /* Padding inside the box */
+      margin-top: 13px;
+      border-radius: 8px; /* Rounded corners */
+    }
+
+    .box::after {
+        content: ''; /* Empty content for the arrow */
+        position: absolute; /* Position the arrow relative to the box */
+        bottom: 100%; /* Position it above the box */
+        left: 60%; /* Center it horizontally */
+        transform: translateX(-50%); /* Shift it left by half of its width */
+        border-width: 10px; /* Width of the arrow */
+        border-style: solid; /* Solid arrow */
+        border-color: transparent transparent white transparent; /* Arrow color */
     }
 </style>
