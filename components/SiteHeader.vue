@@ -18,21 +18,16 @@
                             About Us
                         </NuxtLink>
                     </li>
-                    <li class="md:block hidden">
+                    <li class="md:block hidden relative" style="display: flex; flex-direction: column;align-items: center;">
                         <button @click="toggleMenu">                            
                             Advisory and Assitance Service Areas
                         </button>
                         <template v-if="isMenuVisible">
-                            <div class="bg-white text-black p-5 w-max absolute right-1.5 rounded-md box">
+                            <div class="bg-white text-black w-max absolute rounded-md box p-8 mt-12">
                                 <div class="border-b text-2xl mb-3 pb-2">Capabilities</div>
-                                <div class="grid grid-cols-4 grid-rows-7 grid-flow-col grid-cols-none text-base font-normal"
-                                 
-                                 >
-                                    <!-- <div class="flex flex-cols-4 flex-rows-7 flex-flow-col-dense text-base font-normal"> -->
-                                    <div
-                                    v-for="menu in menus" :key="menu.link"
-                                    class="bg-white text-black pr-4 pt-3 grid-item" @click="toggleMenu"
-                                    >
+                                <div class="grid grid-cols-3 grid-rows-8 grid-flow-col grid-cols-none text-base font-normal gap-3">
+                                    <div v-for="menu in menus" :key="menu.link" 
+                                        class="bg-white text-black pr-4 pt-3 grid-item hover:text-darkgreen" @click="toggleMenu">
                                         <NuxtLink :to="menu.link">
                                             {{  menu.name }}
                                         </NuxtLink>
@@ -246,17 +241,17 @@ export default {
       transform: translateX(0);
     }
 
-    .box {
-      padding: 20px; /* Padding inside the box */
-      margin-top: 13px;
-      border-radius: 8px; /* Rounded corners */
-    }
+    // .box {
+    //   padding: 20px; /* Padding inside the box */
+    //   margin-top: 13px;
+    //   border-radius: 8px; /* Rounded corners */
+    // }
 
     .box::after {
         content: ''; /* Empty content for the arrow */
         position: absolute; /* Position the arrow relative to the box */
         bottom: 100%; /* Position it above the box */
-        left: 60%; /* Center it horizontally */
+        left: 50%; /* Center it horizontally */
         transform: translateX(-50%); /* Shift it left by half of its width */
         border-width: 10px; /* Width of the arrow */
         border-style: solid; /* Solid arrow */
