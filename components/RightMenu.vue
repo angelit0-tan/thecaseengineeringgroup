@@ -3,12 +3,13 @@
         class="flex flex-wrap gap-4 justify-center w-5/6 mx-auto text-sm"
         :class="{'flex-col' : isSubPage}">
         <button
-            v-for="(menu, index) in menus.sort((a,b)=> a.order - b.order)" :key="menu.link"
+            v-for="menu in menus.sort((a,b)=> a.order - b.order)" :key="menu.link"
             class="md:px-4 md:py-3 p-2 rounded-full flex items-center gap-2 hover:bg-darkgreen hover:text-white transition delay-75 duration-200 w-fit"
-            :class="index === 0 ? 'bg-darkgreen text-white' : 'bg-white text-black'">
+            :class="menu.order === 0 ? 'bg-darkgreen text-white' : 'bg-white text-black'"
+            >
             <img src="/images/add.png"/>
-            <NuxtLink :to="menu.link" @click="menuOrder">
-                <span> {{  menu.name }} - {{ menu.order }}</span>
+            <NuxtLink :to="menu.link">
+                <span> {{  menu.name }}</span>
             </NuxtLink>
         </button>
     </div>
@@ -30,7 +31,7 @@
                     },{
                         name: 'Cybersecurity',
                         link: 'cyber-security',
-                        order: 0,
+                        order: 1,
                     },{
                         name: 'Zero Trust Security',
                         link: 'zero-trust-security',
@@ -130,18 +131,14 @@
                         name: 'Enterprise Architecture',
                         link: 'enterprise-architecture',
                         order: 1,
-                    }
-                ]
+                    },
+                ],
 
             }
         },
-        computed: {
-            
-        },
-        methods: {
-            menuOrder(){
-                alert('link');
-            }
+        mounted() {
+            const activeMenu = this.menus.find(menu => menu.link === window.location.pathname.split('/')[1])
+            if(activeMenu) return activeMenu.order = 0
         }
     }
 
