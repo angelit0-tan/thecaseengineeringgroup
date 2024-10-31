@@ -3,11 +3,12 @@
         class="flex flex-wrap gap-4 justify-center w-5/6 mx-auto text-sm"
         :class="{'flex-col' : isSubPage}">
         <button
-            v-for="menu in menus" :key="menu.link"
-            class="px-4 py-3 text-black bg-white rounded-full flex items-center gap-2 hover:bg-darkgreen hover:text-white transition delay-75 duration-200 w-fit"> 
+            v-for="(menu, index) in menus.sort((a,b)=> a.order - b.order)" :key="menu.link"
+            class="px-4 py-3 text-black rounded-full flex items-center gap-2 hover:bg-darkgreen hover:text-white transition delay-75 duration-200 w-fit"
+            :class="index === 0 ? 'bg-darkgreen text-white' : 'bg-white'">
             <img src="/images/add.png"/>
-            <NuxtLink :to="menu.link">
-                <span> {{  menu.name }}</span>
+            <NuxtLink :to="menu.link" @click="menuOrder">
+                <span> {{  menu.name }} - {{ menu.order }}</span>
             </NuxtLink>
         </button>
     </div>
@@ -29,7 +30,7 @@
                     },{
                         name: 'Cybersecurity',
                         link: 'cyber-security',
-                        order: 1,
+                        order: 0,
                     },{
                         name: 'Zero Trust Security',
                         link: 'zero-trust-security',
@@ -132,6 +133,14 @@
                     }
                 ]
 
+            }
+        },
+        computed: {
+            
+        },
+        methods: {
+            menuOrder(){
+                alert('link');
             }
         }
     }
