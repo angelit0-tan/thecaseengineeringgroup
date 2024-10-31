@@ -6,7 +6,7 @@
             style="background-image: url('/images/home-bg.jpg'), linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4))">
                <div class="py-32">
                    <div class="flex flex-col gap-10 justify-center mb-8 items-center">
-                       <div class="text-white text-7xl font-bold">
+                       <div class="text-white md:text-7xl text-2xl font-bold px-2 text-center">
                            What Problem Do You Need Solved?
                        </div>
                        <div class="w-2/4">

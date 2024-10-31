@@ -44,7 +44,7 @@
                 </div>
             </div>
             <div class="bg-black py-10">
-                <div class="text-white text-3xl font-bold px-10">
+                <div class="text-white md:text-3xl text-xl font-bold px-10">
                     Core Advisory and Assistance Service Areas
                 </div>
                 <div>
