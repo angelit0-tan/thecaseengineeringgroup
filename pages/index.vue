@@ -11,7 +11,9 @@
                        </div>
                        <div class="md:w-2/4 w-full px-2">
                            <div class="w-full border border-white rounded-full">
-                               <input type="text" class="rounded-full w-full text-white bg-black px-4 py-4" placeholder="Submit your problem here..."/>
+                            <NuxtLink to="contact-us">
+                                <input type="text" class="rounded-full w-full text-white bg-black px-4 py-4" placeholder="Submit your problem here..."/>
+                            </NuxtLink>
                            </div>
                        </div>
                        <div>

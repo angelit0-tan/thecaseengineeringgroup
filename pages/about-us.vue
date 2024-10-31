@@ -30,7 +30,7 @@
                 </div>
             </div>
             <div class="bg-black py-10">
-                <div class="text-white text-3xl font-bold px-10">
+                <div class="text-white md:text-3xl text-xl font-bold px-10">
                     Core Advisory and Assistance Service Areas
                 </div>
                 <div>
@@ -45,7 +45,7 @@
                 <template>
                     <div class="mb-12 text-center">
                         <div class="mb-3 md:w-4/5 w-full mx-auto">
-                            <span class="font-bold text-3xl">Contact us today to discuss the challenges your organization is facing, and let us craft the solutions that will drive your success.</span>
+                            <span class="font-bold md:text-3xl text-xl">Contact us today to discuss the challenges your organization is facing, and let us craft the solutions that will drive your success.</span>
                         </div>
                     </div>
                 </template>

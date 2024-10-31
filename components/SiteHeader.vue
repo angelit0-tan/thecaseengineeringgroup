@@ -8,28 +8,28 @@
             </div>
             <div class="main-nav">
                 <ul class="flex md:flex-row flex-col gap-10 md:text-white text-black items-center font-bold nav-lists">
-                    <li>
-                        <NuxtLink to="/" external>
+                    <li @click="toggle">
+                        <NuxtLink to="/">
                             Home
                         </NuxtLink>
                     </li>
-                    <li>
-                        <NuxtLink to="/about-us" :activeClass="'text-green'" external>
+                    <li @click="toggle">
+                        <NuxtLink to="/about-us" :activeClass="'text-green'" >
                             About Us
                         </NuxtLink>
                     </li>
-                    <li class="md:block">
+                    <li class="md:block hidden">
                         <NuxtLink to="/">
                             Advisory and Assitance Service Areas
                         </NuxtLink>
                     </li>
-                    <li>
-                        <NuxtLink to="/join-our-team" :activeClass="'text-green'" external>
+                    <li @click="toggle">
+                        <NuxtLink to="/join-our-team" :activeClass="'text-green'">
                             Join Our Team
                         </NuxtLink>
                     </li>
-                    <li>
-                        <NuxtLink to="/contact-us" :activeClass="'text-green'" external>
+                    <li @click="toggle">
+                        <NuxtLink to="/contact-us" :activeClass="'text-green'">
                             Contact Us
                         </NuxtLink>
                     </li>
@@ -101,6 +101,7 @@ export default {
             position: unset;
             visibility: visible;
             background-color: unset;
+            pointer-events: unset;
         }
     }
 

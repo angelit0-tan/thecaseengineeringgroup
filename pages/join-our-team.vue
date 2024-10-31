@@ -5,7 +5,7 @@
                 class="bg-service relative" 
                 style="background-image: url('/images/join-our-team-bg-1.jpg'), linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)); background-position: center;">
                 <div class="text-white font-bold md:w-1/2 w-full md:px-10 px-5 absolute text-service">
-                    <div class="md:text-7xl text-2xl uppercase mb-3">
+                    <div class="md:text-7xl text-2xl uppercase mb-3 font-bold">
                         Join our team
                     </div>
                     <p class="md:text-2xl text-sm">
