@@ -79,7 +79,7 @@ export default {
         background-color: rgba(255, 255, 255, 0.9);
         -webkit-backdrop-filter: blur(5px);
         backdrop-filter: blur(10px);
-        position: absolute;
+        position: fixed;
         top: 0;
         left: 0;
         width: 100%;
