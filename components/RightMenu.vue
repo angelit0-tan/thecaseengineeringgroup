@@ -1,18 +1,44 @@
 <template>
-    <div 
-        class="flex flex-wrap gap-4 justify-center w-5/6 mx-auto text-xs"
-        :class="{'flex-col' : isSubPage}">
-        <button
-            v-for="menu in menus.sort((a,b)=> a.order - b.order)" :key="menu.link"
-            class="md:px-4 md:py-3 p-2 rounded-full flex items-center gap-2 hover:bg-darkgreen hover:text-white transition delay-75 duration-200 w-fit"
-            :class="menu.order === 0 ? 'bg-darkgreen text-white' : 'bg-white text-black'"
-            >
-            <img src="/images/add.png"/>
-            <NuxtLink :to="menu.link">
-                <span> {{  menu.name }}</span>
-            </NuxtLink>
-        </button>
+    <div class="w-5/6 mx-auto text-xs">
+        <div 
+            class="flex flex-wrap gap-4 justify-center mb-4"
+            :class="{'md:flex-col' : isSubPage}">
+            <button
+                v-for="(menu, idx) in menus.sort((a,b)=> a.order - b.order)" :key="menu.link"
+                class="md:px-4 md:py-3 p-2 rounded-full hover:bg-darkgreen hover:text-white transition delay-75 duration-200 w-fit"
+                :class="[menu.order === 0 ? 'bg-darkgreen text-white' : 'bg-white text-black', idx > 3 ? 'md:inline-block hidden' : 'inline-block', {'show' : showAll}]"
+                >
+                <div class="flex items-center gap-2">
+                    <img src="/images/add.png"/>
+                    <NuxtLink :to="menu.link">
+                        <span> {{  menu.name }}</span>
+                    </NuxtLink>
+                </div>
+            </button>
+        </div>
+        <div class="md:hidden block text-center flex justify-center">
+            <button class="md:px-4 md:py-3 p-2 rounded-full hover:bg-darkgreen hover:text-white transition delay-75 duration-200 w-fit bg-white text-black flex gap-2 items-center"
+                @click="showAll = !showAll">
+                <div>
+                    <svg 
+                        v-if="showAll"
+                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 15.75 7.5-7.5 7.5 7.5" />
+                    </svg>
+
+                    <svg
+                        v-if="!showAll" 
+                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                    </svg>
+                </div>
+                <div>
+                    {{ !showAll ? 'See More' : 'See Less' }}
+                </div>
+            </button>
+        </div>
     </div>
+    
 </template>
 <script>
     export default{
@@ -20,7 +46,8 @@
             isSubPage:{
                 type: Boolean,
                 default: false
-            }
+            },
+            showAll: false
         },
         data() {
             return{
@@ -143,3 +170,8 @@
     }
 
 </script>
+<style scoped>
+    .show {
+        display: inline-block!important;
+    }
+</style>

@@ -28,7 +28,7 @@
            </div>
         </BgHeader>
        <div class="container mx-auto pt-10 pb-20">
-           <div class="text-white text-5xl font-bold text-center py-10">
+           <div class="text-white md:text-5xl text-xl font-bold text-center md:py-10 pb-5">
                Who We Are and Why It Matters
            </div>
            <div class="w-4/5 mx-auto">
@@ -38,11 +38,11 @@
        <div 
           class="pt-10 pb-20" 
           style="background-image: linear-gradient(92.68deg, #1B5CA6 0%, #4597C6 97.28%);">
-          <div class="text-white text-5xl font-bold text-center py-10 leading-14">
+          <div class="text-white md:text-5xl text-xl font-bold text-center md:py-10 pb-5 md:leading-14">
             North American Industry Classification System <br/>(NAICS) and Business Classification
           </div>
-          <div class="flex flex-wrap justify-center gap-y-20 gap-x-8 text-white text-center w-4/5 mx-auto text-xl font-bold text-balance leading-11">
-            <div class="bg-black rounded-lg p-6 w-80"
+          <div class="flex flex-wrap justify-center md:gap-y-20 md:gap-x-8 gap-5 text-white text-center w-4/5 mx-auto md:text-xl text-base font-bold text-balance leading-11">
+            <div class="bg-black rounded-lg md:p-6 p-2 w-80"
               v-for="industry in industries" :key="industry.id">
               <a :href="industry.link" target="_blank" class="flex flex-col h-full">
                 <div>

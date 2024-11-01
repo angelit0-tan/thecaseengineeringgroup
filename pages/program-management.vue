@@ -31,7 +31,7 @@
                         <p class="mb-7">
                             Our program management team takes a proactive approach to identifying potential roadblocks before they impact your timeline or budget. Through comprehensive project planning, detailed reporting, and adaptive management techniques, we keep your projects on track and provide real-time insights into progress and performance. We have successfully supported high-stakes government programs, including our work with the IRS and the Department of Treasury,  ensuring that large-scale initiatives meet both technical requirements and compliance standards
                         </p>
-                        <div class="text-3xl font-bold text-left md:leading-14 mb-5">
+                        <div class="md:text-3xl text-xl font-bold text-left md:leading-14 mb-5">
                             Customized Program Management for Every Engagement
                         </div>
                         <p class="mb-7">

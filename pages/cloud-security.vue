@@ -31,7 +31,7 @@
                         <p class="mb-7">
                             Our cloud security framework leverages industry standards like the CIS Benchmarks and NIST  Cybersecurity Framework, ensuring your cloud deployments meet the highest levels of security and compliance. We implement automated monitoring and alerting systems that provide real-time visibility into your cloud infrastructure, enabling us to detect and respond to threats before they can cause harm. Whether it’s configuring cloud firewalls, managing identity and access control, or integrating advanced encryption protocols, we tailor our solutions to meet your unique cloud security needs
                         </p>
-                        <div class="text-3xl font-bold text-left md:leading-14 mb-5">
+                        <div class="md:text-3xl text-xl font-bold text-left md:leading-14 mb-5">
                             A Strategic Partnership for Securing the Cloud
                         </div>
                         <p class="mb-7">

@@ -31,7 +31,7 @@
                         <div class="bg-[url('/images/information-technology-service-management-bg-2.jpg')] mb-10"
                             style="background-repeat: no-repeat, repeat; background-size: cover; min-height: 50vh;background-position: center;">
                         </div>
-                        <div class="text-3xl font-bold text-left md:leading-14 mb-5">
+                        <div class="md:text-3xl text-xl font-bold text-left md:leading-14 mb-5">
                             Customized ITIL Solutions for Your Business Needs
                         </div>
                         <p class="mb-7">
