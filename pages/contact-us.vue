@@ -2,6 +2,8 @@
     <div>
         <div class="w-full bg-lighblue">
             <ContactUs
+                isCompanyRequired
+                isJobTitleRequired
                 class="py-16 px-4">
                 <template>
                     <div class="mb-12 text-center">

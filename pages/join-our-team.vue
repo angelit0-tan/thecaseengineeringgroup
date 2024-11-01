@@ -41,7 +41,7 @@
                                     <span>Interpersonal Skills</span>                                     
                                 </div>                                
                                 <p>                                     
-                                    Do you go out of your way to discover real solutions for clients that help them see real-world solutions for their problems? 
+                                    Do you have strong communication skills and the ability to stay motivated while working on your own or in a team? 
                                 </p>
                             </div>
                             <div>
@@ -64,6 +64,7 @@
         <div class="w-full bg-lighblue">
             <ContactUs
                 is-attachment-required
+                is-services-required
                 class="py-16 px-4">
                 <template>
                     <div class="mb-12 text-center">
@@ -73,6 +74,9 @@
                             </span>
                         </div>
                     </div>
+                </template>
+                <template #services>
+                    Areas of Expertise (Select at least one) <span class="text-red">*</span>
                 </template>
             </ContactUs>
         </div>

@@ -1,6 +1,6 @@
 <template>
     <div 
-        class="flex flex-wrap gap-4 justify-center w-5/6 mx-auto text-sm"
+        class="flex flex-wrap gap-4 justify-center w-5/6 mx-auto text-xs"
         :class="{'flex-col' : isSubPage}">
         <button
             v-for="menu in menus.sort((a,b)=> a.order - b.order)" :key="menu.link"

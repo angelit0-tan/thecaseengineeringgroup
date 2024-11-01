@@ -7,7 +7,7 @@
                 </a>
             </div>
             <div class="main-nav">
-                <ul class="flex md:flex-row md:text-lg text-xl flex-col gap-10 md:text-white text-black items-center font-bold nav-lists">
+                <ul class="flex md:flex-row md:text-lg text-xl flex-col gap-10 text-white items-center font-bold nav-lists">
                     <li @click="toggle">
                         <NuxtLink to="/">
                             Home
@@ -18,7 +18,7 @@
                             About Us
                         </NuxtLink>
                     </li>
-                    <li class="md:block hidden relative" style="display: flex; flex-direction: column;align-items: center;">
+                    <li class="md:block hidden relative md:flex flex-col items-center">
                         <button @click="toggleMenu">                            
                             Advisory and Assitance Service Areas
                         </button>
@@ -57,7 +57,7 @@
                         <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
                     </svg>
                 </div>
-                <div class="menu-close text-black"
+                <div class="menu-close"
                     :class="{'hidden' : !isOpen}"
                     @click="toggle">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-11">
@@ -205,7 +205,7 @@ export default {
 
     .main-nav {
         z-index: 99;
-        background-color: rgba(255, 255, 255, 0.9);
+        background-color: rgba(0, 0, 0, 0.9);
         -webkit-backdrop-filter: blur(5px);
         backdrop-filter: blur(10px);
         position: fixed;

@@ -83,7 +83,9 @@
         </div>
         <div class="mb-10" v-if="isServicesRequired">
             <p class="mb-5">
-                Which services are you interested in? (Please select atleast one) <span class="text-red">*</span>
+                <slot name="services">
+                    Which services are you interested in? (Please select atleast one) <span class="text-red">*</span>
+                </slot>
                 <span class="text-red text-sm" v-if="errors.selectedOptions.value">
                     Required field
                 </span>
@@ -255,6 +257,16 @@ export default {
                     }
                 }
             }
+            
+            if (this.errors.selectedOptions.validate) {
+                if (this.form.selectedOptions.length <= 0) {
+                    this.errors.selectedOptions.value = 'required';
+                    this.hasRequired = true;
+                    return false
+                } else {
+                    this.errors.selectedOptions.value = null;
+                }
+            }
             this.hasRequired = false;
             return true;
         },
@@ -267,60 +279,60 @@ export default {
 
             try {
                 this.isSending = true;
-                // let formData = new FormData();
-                // formData.append('first_name', this.form.firstName);
-                // formData.append('last_name', this.form.lastName);
-                // formData.append('email', this.form.email);
-                // formData.append('phone', this.form.phone);
-                // formData.append('company', this.form.company);
-                // formData.append('job_title', this.form.jobTitle);
-                // formData.append('services', this.form.selectedOptions);
-                // formData.append('message', this.form.message);
-                // formData.append('file', this.form.attachment);
+                let formData = new FormData();
+                formData.append('first_name', this.form.firstName);
+                formData.append('last_name', this.form.lastName);
+                formData.append('email', this.form.email);
+                formData.append('phone', this.form.phone);
+                formData.append('company', this.form.company);
+                formData.append('job_title', this.form.jobTitle);
+                formData.append('services', this.form.selectedOptions);
+                formData.append('message', this.form.message);
+                formData.append('file', this.form.attachment);
 
-                // await axios.post(`http://localhost:3008/email`, formData);
+                await axios.post(`http://localhost:3008/email`, formData);
                 
-                this.$mail.send({
-                    from: { 
-                        name: this.form.firstName ,
-                        address: 'support@perfectfriends.com'
-                    },
-                    subject: 'Incredible',
-                    html: `<table>
-                        <tr>
-                        <td>First name:</td>
-                        <td>${this.form.firstName || ''}</td>
-                        </tr>
-                        <tr>
-                            <td>Last name:</td>
-                            <td>${this.form.lastName || ''}</td>
-                        </tr>
-                        <tr>
-                            <td>E-mail:</td>
-                            <td>${this.form.email || ''}</td>
-                        </tr>
-                        <tr>
-                            <td>Phone:</td>
-                            <td>${this.form.phone || ''}</td>
-                        </tr>
-                        <tr>
-                            <td>Company:</td>
-                            <td>${this.form.company || ''}</td>
-                        </tr>
-                        <tr>
-                            <td>Job Title:</td>
-                            <td>${this.form.jobTitle || ''}</td>
-                        </tr>
-                        <tr>
-                            <td>Message: </td>
-                            <td>${this.form.message || ''}</td>
-                        </tr>
-                        <tr>
-                            <td>Services: </td>
-                            <td>${this.form.selectedOptions || ''}</td>
-                        </tr>
-                    </table>`,
-                });
+                // this.$mail.send({
+                //     from: { 
+                //         name: this.form.firstName ,
+                //         address: 'support@perfectfriends.com'
+                //     },
+                //     subject: 'Incredible',
+                //     html: `<table>
+                //         <tr>
+                //         <td>First name:</td>
+                //         <td>${this.form.firstName || ''}</td>
+                //         </tr>
+                //         <tr>
+                //             <td>Last name:</td>
+                //             <td>${this.form.lastName || ''}</td>
+                //         </tr>
+                //         <tr>
+                //             <td>E-mail:</td>
+                //             <td>${this.form.email || ''}</td>
+                //         </tr>
+                //         <tr>
+                //             <td>Phone:</td>
+                //             <td>${this.form.phone || ''}</td>
+                //         </tr>
+                //         <tr>
+                //             <td>Company:</td>
+                //             <td>${this.form.company || ''}</td>
+                //         </tr>
+                //         <tr>
+                //             <td>Job Title:</td>
+                //             <td>${this.form.jobTitle || ''}</td>
+                //         </tr>
+                //         <tr>
+                //             <td>Message: </td>
+                //             <td>${this.form.message || ''}</td>
+                //         </tr>
+                //         <tr>
+                //             <td>Services: </td>
+                //             <td>${this.form.selectedOptions || ''}</td>
+                //         </tr>
+                //     </table>`,
+                // });
 
                 this.fieldsClear();
                 alert("Message is sent!")
