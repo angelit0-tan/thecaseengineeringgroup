@@ -12,7 +12,10 @@
                        <div class="md:w-2/4 w-full px-2">
                            <div class="w-full border border-white rounded-full">
                             <NuxtLink to="contact-us">
-                                <input type="text" class="rounded-full w-full text-white bg-black px-4 py-4" placeholder="Submit your problem here..."/>
+                              <div class="flex items-center rounded-full w-full text-white bg-black p-4 gap-3">
+                                <img src="/images/search.png"/>
+                                <input type="text" class="w-full bg-black" placeholder="Submit your problem here..."/>
+                              </div>
                             </NuxtLink>
                            </div>
                        </div>
