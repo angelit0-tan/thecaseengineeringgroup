@@ -19,8 +19,8 @@
                             </NuxtLink>
                            </div>
                        </div>
-                       <div>
-                           <button class="border border-white px-8 py-3 text-white bg-darkgreen rounded-full"> Core Advisory Areas </button>
+                       <div class="mb-2">
+                           <span class="border border-white px-8 py-3 text-white bg-darkgreen rounded-full"> Core Advisory Areas </span>
                        </div>
                    </div>
                    <RightMenu/>
@@ -78,19 +78,8 @@
           id: '541513',
           name: 'Computer Facilities Management Services',
           link: 'https://www.naics.com/naics-code-description/?code=541513&v=2022'
-        },{
-          id: '541511',
-          name: 'Customer Computer Programming Services',
-          link: 'https://www.naics.com/naics-code-description/?code=541511&v=2022'
-        },{
-          id: '541512',
-          name: 'Computer Systems Design Services',
-          link: 'https://www.naics.com/naics-code-description/?code=541512&v=2022'
-        },{
-          id: '541513',
-          name: 'Computer Facilities Management Services',
-          link: 'https://www.naics.com/naics-code-description/?code=541513&v=2022'
-        },{
+        },
+        {
           id: '541519',
           name: 'Other Computer Related Services',
           link: 'https://www.naics.com/naics-code-description/?code=541519&v=2022'

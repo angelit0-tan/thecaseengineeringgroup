@@ -55,7 +55,7 @@
                             </div>
                         </div>
                         <div>
-                            <img src="/images/join-our-team-bg-2.jpg" class="rounded-md"/>
+                            <img src="/images/join-our-team-bg-3.jpg" class="rounded-md"/>
                         </div>
                     </div>
                 </div>
