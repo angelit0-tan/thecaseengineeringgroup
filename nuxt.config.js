@@ -11,6 +11,8 @@ export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'The C.A.S.E Engineering Group',
+    charset: 'utf-8',
+    viewport: 'width=device-width, initial-scale=1',
     htmlAttrs: {
       lang: 'en'
     },
