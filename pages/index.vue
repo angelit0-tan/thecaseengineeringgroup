@@ -23,7 +23,7 @@
                            <span class="border border-white px-8 py-3 text-white bg-darkgreen rounded-full"> Core Advisory Areas </span>
                        </div>
                    </div>
-                   <!-- <RightMenu/> -->
+                   <RightMenu/>
                </div>
            </div>
         </BgHeader>

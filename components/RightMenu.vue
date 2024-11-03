@@ -1,5 +1,7 @@
 <template>
-    <div class="w-5/6 mx-auto text-xs">
+    <div
+        v-if="menus" 
+        class="w-5/6 mx-auto text-xs">
         <div 
             class="flex flex-wrap gap-4 justify-center mb-4"
             :class="{'md:flex-col' : isSubPage}">
