@@ -27,14 +27,14 @@
                </div>
            </div>
         </BgHeader>
-       <div class="container mx-auto pt-10 pb-20">
+       <!-- <div class="container mx-auto pt-10 pb-20">
            <div class="text-white md:text-5xl text-xl font-bold text-center md:py-10 pb-5">
                Who We Are and Why It Matters
            </div>
            <div class="w-4/5 mx-auto">
             <img src="https://ypfs3.s3.us-west-2.amazonaws.com/photos/STp3MC20tI0jLYFXbkuOIM0CVjp6L5G9tw03jmWE.gif" class="rounded-lg"/>
            </div>
-       </div>
+       </div> -->
        <div 
           class="pt-10 pb-20" 
           style="background-image: linear-gradient(92.68deg, #1B5CA6 0%, #4597C6 97.28%);">

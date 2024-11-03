@@ -22,7 +22,7 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/static/images/icon.jpg' },
-      { rel: 'stylesheet', href: 'https://rsms.me/inter/inter.css' }
+      // { rel: 'stylesheet', href: 'https://rsms.me/inter/inter.css' }
     ]
   },
 
