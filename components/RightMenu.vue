@@ -12,7 +12,7 @@
                 >
                 <div class="flex items-center gap-2">
                     <img src="/images/add.png"/>
-                    <NuxtLink :to="menu.link">
+                    <NuxtLink :to="`/${menu.link}`">
                         <span> {{  menu.name }}</span>
                     </NuxtLink>
                 </div>
