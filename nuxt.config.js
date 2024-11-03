@@ -21,8 +21,8 @@ export default {
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/static/images/icon.jpg' },
-      // { rel: 'stylesheet', href: 'https://rsms.me/inter/inter.css' }
+      { rel: 'icon', type: 'image/x-icon', href: '/images/icon.jpg' },
+      { rel: 'stylesheet', href: 'https://rsms.me/inter/inter.css' }
     ]
   },
 
