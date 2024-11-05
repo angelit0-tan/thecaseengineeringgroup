@@ -14,9 +14,9 @@
                         </NuxtLink>
                     </li>
                     <li @click="toggle">
-                        <NuxtLink to="/about-us" :activeClass="'text-green'" >
+                        <a href="/about-us" :class="{'text-green' : slug === '/about-us'}">
                             About Us
-                        </NuxtLink>
+                        </a>
                     </li>
                     <li class="md:block hidden relative md:flex flex-col items-center">
                         <button @click="toggleMenu">                            
@@ -185,6 +185,11 @@ export default {
                         order: 1,
                     },
                 ],
+        }
+    },
+    computed: {
+        slug() {
+            return this.$route.path;
         }
     },
     methods: {

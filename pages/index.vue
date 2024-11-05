@@ -32,8 +32,7 @@
                Who We Are and Why It Matters
            </div>
            <div class="w-4/5 mx-auto">
-            <!-- <img src="https://ypfs3.s3.us-west-2.amazonaws.com/photos/STp3MC20tI0jLYFXbkuOIM0CVjp6L5G9tw03jmWE.gif" class="rounded-lg"/> -->
-            <video autoplay controls width="100%">
+            <video controls width="100%" ref="homeVideoRef">
               <source src="https://ypfs3.s3.us-west-2.amazonaws.com/videos/672a3944395d8.mp4" type="video/mp4" />
             </video>
            </div>
@@ -62,6 +61,8 @@
   </div>
 </template>
 <script>
+  import videojs from 'video.js';
+
   export default{
     data() {
       return {
@@ -110,8 +111,15 @@
           id: '541110',
           name: 'Offices of Lawyers',
           link: 'https://www.naics.com/naics-code-description/?code=541110&v=2022'
-        }]
+        }],
+        homeVideoRef: null
       }
+    },
+    mounted() {
+      this.player = videojs(this.$refs.homeVideoRef);
+      setTimeout(() => {
+        this.player.play();
+      }, 2000)
     }
   }
 </script>

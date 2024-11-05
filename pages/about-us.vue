@@ -17,7 +17,7 @@
                             <p>                        
                                 <img class="float-right ml-1" src="/images/sba2.png" />  
                                 At The C.A.S.E. Engineering Group, we specialize in delivering program support and advisory services that empower organizations to overcome complex challenges. Founded on expertise in Cybersecurity, Architecture, Strategy, and Engineering, we have grown into a versatile team capable of providing dynamic solutions across a wide range of industries. While our roots are in information technology,
-                                <img class="float-left mt-6 mr-2" src="/images/sdvosb2.png" style="shape-outside: circle();"/>
+                                <img class="float-left mt-2 mr-2" src="/images/sdvosb2.png" style="shape-outside: circle();"/>
                                 our impact goes far beyond. Through our innovative approach to research and 
                                 problem solving and leveraging an extensive partner network, we deliver solutions 
                                 in areas outside of IT as well. From optimizing operations and enhancing 
