@@ -5,19 +5,18 @@
         <div 
             class="flex flex-wrap gap-4 justify-center mb-4"
             :class="{'md:flex-col' : isSubPage}">
-            <template v-for="(menu, idx) in myMenus">
-                <a href
+            <div v-for="(menu, idx) in myMenus" :key="idx">
+                <NuxtLink
                     class="md:px-4 md:py-3 p-2 rounded-full hover:bg-darkgreen hover:text-white transition delay-75 duration-200 w-fit"
                     :class="[menu.order === 0 ? 'bg-darkgreen text-white' : 'bg-white text-black', idx > 3 ? 'md:inline-block hidden' : 'inline-block', {'show' : showAll}]"
-                    :href="`/${menu.link}`"
-                    >
+                    :to="`/${menu.link}`">
                     <div class="flex items-center gap-2">
                         <img src="/images/add.png"/>
                         
                             <span> {{  menu.name }}</span>
                     </div>
-                </a>
-            </template>
+                </NuxtLink>
+            </div>
            
         </div>
         <div class="md:hidden block text-center flex justify-center">
