@@ -5,18 +5,20 @@
         <div 
             class="flex flex-wrap gap-4 justify-center mb-4"
             :class="{'md:flex-col' : isSubPage}">
-            <button
-                v-for="(menu, idx) in myMenus" :key="menu.link"
-                class="md:px-4 md:py-3 p-2 rounded-full hover:bg-darkgreen hover:text-white transition delay-75 duration-200 w-fit"
-                :class="[menu.order === 0 ? 'bg-darkgreen text-white' : 'bg-white text-black', idx > 3 ? 'md:inline-block hidden' : 'inline-block', {'show' : showAll}]"
-                >
-                <div class="flex items-center gap-2">
-                    <img src="/images/add.png"/>
-                    <NuxtLink :to="menu.link">
-                        <span> {{  menu.name }}</span>
-                    </NuxtLink>
-                </div>
-            </button>
+            <template v-for="(menu, idx) in myMenus">
+                <NuxtLink
+                    class="md:px-4 md:py-3 p-2 rounded-full hover:bg-darkgreen hover:text-white transition delay-75 duration-200 w-fit"
+                    :class="[menu.order === 0 ? 'bg-darkgreen text-white' : 'bg-white text-black', idx > 3 ? 'md:inline-block hidden' : 'inline-block', {'show' : showAll}]"
+                    :to="`/${menu.link}`"
+                    >
+                    <div class="flex items-center gap-2">
+                        <img src="/images/add.png"/>
+                        
+                            <span> {{  menu.name }}</span>
+                    </div>
+                </NuxtLink>
+            </template>
+           
         </div>
         <div class="md:hidden block text-center flex justify-center">
             <button class="md:px-4 md:py-3 p-2 rounded-full hover:bg-darkgreen hover:text-white transition delay-75 duration-200 w-fit bg-white text-black flex gap-2 items-center"

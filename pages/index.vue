@@ -36,14 +36,15 @@
            </div>
        </div>
        <div 
-          class="pt-10 pb-20" 
+          class="pt-10 pb-20 px-2" 
           style="background-image: linear-gradient(92.68deg, #1B5CA6 0%, #4597C6 97.28%);">
           <div class="text-white md:text-5xl text-xl font-bold text-center md:py-10 pb-5 md:leading-14">
             North American Industry Classification System <br/>(NAICS) and Business Classification
           </div>
-          <div class="flex flex-wrap justify-center md:gap-y-20 md:gap-x-8 gap-5 text-white text-center w-4/5 mx-auto md:text-xl text-base font-bold text-balance leading-11">
+          <div class="flex flex-wrap justify-center md:gap-y-20 md:gap-x-8 gap-5 text-white text-center w-4/5 mx-auto md:text-xl text-base font-bold text-balance leading-11 mb-2">
             <div class="bg-black rounded-lg md:p-6 p-2 w-80"
-              v-for="industry in industries" :key="industry.id">
+              v-for="(industry, idx) in industries" :key="idx"
+              :class="[idx > 2 ? 'md:inline-block hidden' : 'inline-block', {'show' : showAll}]">
               <a :href="industry.link" target="_blank" class="flex flex-col h-full">
                 <div>
                   {{ industry.id }}
@@ -54,6 +55,27 @@
               </a>
             </div>
           </div>
+          <div class="md:hidden block text-center flex justify-center">
+            <button class="md:px-4 md:py-3 p-2 rounded-full hover:bg-darkgreen hover:text-white transition delay-75 duration-200 w-fit bg-white text-black flex gap-2 items-center"
+                @click="showAll = !showAll">
+                <div>
+                    <svg 
+                        v-if="showAll"
+                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 15.75 7.5-7.5 7.5 7.5" />
+                    </svg>
+
+                    <svg
+                        v-if="!showAll" 
+                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                    </svg>
+                </div>
+                <div>
+                    {{ !showAll ? 'See More' : 'See Less' }}
+                </div>
+            </button>
+          </div>
        </div>
         <site-footer/>
   </div>
@@ -62,6 +84,7 @@
   export default{
     data() {
       return {
+        showAll: false,
         industries:[{
           id: '541330',
           name: 'Engineering Services',
@@ -113,5 +136,7 @@
   }
 </script>
 <style lang="scss" scoped>
-
+  .show {
+    display: inline-block!important;
+  }
 </style>

@@ -92,9 +92,32 @@
             </p>
             <div class="md:grid grid-cols-3 gap-3">
                 <div v-for="(category, idx) in categories" :key="idx"
-                    class="flex items-center gap-2">
+                    class="flex items-center gap-2 mb-2"
+                    :class="[idx > 3 ? 'md:inline-block hidden' : 'inline-block', {'show' : showAll}]"
+                    >
                     <input type="checkbox" :id="`${category}-${idx}`" :value="category" v-model="form.selectedOptions"/>
                     <label :for="`${category}-${idx}`">{{ category }}</label>
+                </div>
+                <div class="md:hidden block text-center flex justify-center">
+                    <button class="md:px-4 md:py-3 p-2 rounded-full hover:bg-darkgreen hover:text-white transition delay-75 duration-200 w-fit bg-white text-black flex gap-2 items-center"
+                        @click="showAll = !showAll">
+                        <div>
+                            <svg 
+                                v-if="showAll"
+                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 15.75 7.5-7.5 7.5 7.5" />
+                            </svg>
+
+                            <svg
+                                v-if="!showAll" 
+                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                            </svg>
+                        </div>
+                        <div>
+                            {{ !showAll ? 'See More' : 'See Less' }}
+                        </div>
+                    </button>
                 </div>
             </div>
         </div>
@@ -153,6 +176,7 @@ export default {
     },
     data() {
         return{
+            showAll: false,
             categories: [
                 'Program Support Services',
                 'Cybersecurity',
@@ -350,5 +374,7 @@ export default {
     input[type='text'] {
         @apply bg-light-gray px-3 py-2 w-full;
     }
-
+    .show {
+        display: block!important;
+    }
 </style>

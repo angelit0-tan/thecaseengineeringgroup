@@ -9,7 +9,7 @@
         
         <div 
             class="bg-white md:grid flex flex-col-reverse" 
-            style="grid-template-columns: 75fr 25fr;">
+            style="grid-template-columns: 70fr 30fr;">
             <div>
                 <div class="md:px-20 px-5 md:py-20 py-5 text-black">
                     <div class="w-11/12 mx-auto">
