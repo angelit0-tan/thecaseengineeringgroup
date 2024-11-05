@@ -15,7 +15,7 @@
                             <span class="font-bold text-3xl">Contact Us</span>
                         </div>
                         <div>
-                            Please fill the form and submit.
+                            Please fill out the form and submit
                         </div>
                     </div>
                 </template>

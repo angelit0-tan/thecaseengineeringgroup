@@ -3,6 +3,9 @@
         <video
             controls
             autoplay
+            preload
+            loop
+            muted
             width="100%"
             ref="videoPlayerRef">
               <source src="https://ypfs3.s3.us-west-2.amazonaws.com/videos/672a3944395d8.mp4" type="video/mp4" />

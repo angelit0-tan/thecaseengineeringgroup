@@ -1,5 +1,5 @@
 <template>
-    <div v-if="isReady">
+    <div v-show="isReady">
         <BgHeader>
             <div 
                 class="bg-service relative" 
@@ -71,7 +71,9 @@ export default {
         }
     },
     mounted(){ 
-        this.isReady = true;
+        setTimeout(() => {
+            this.isReady = true;
+        }, 300)
     }
 }
 </script>
