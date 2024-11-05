@@ -4,7 +4,7 @@
        <BgHeader>
            <div class="bg-service" 
             style="background-image: url('/images/home-bg.jpg'), linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4))">
-               <div class="md:py-32 py-20">
+               <div class="md:py-32 py-16">
                    <div class="flex flex-col gap-10 justify-center mb-8 items-center">
                        <div class="text-white md:text-7xl text-2xl font-bold px-2 text-center">
                            What Problem Do You Need Solved?
