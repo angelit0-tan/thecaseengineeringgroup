@@ -73,7 +73,7 @@ export default {
     mounted(){ 
         setTimeout(() => {
             this.isReady = true;
-        }, 100)
+        }, 300)
     }
 }
 </script>
