@@ -27,6 +27,7 @@
     "@nuxtjs/tailwindcss": "^6.12.2",
     "postcss": "^8.4.47",
     "sass": "^1.80.4",
-    "sass-loader": "^10.5.2"
+    "sass-loader": "^10.5.2",
+    "video.js": "^8.19.1"
   }
 }
