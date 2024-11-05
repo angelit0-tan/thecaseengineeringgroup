@@ -32,7 +32,10 @@
                Who We Are and Why It Matters
            </div>
            <div class="w-4/5 mx-auto">
-            <img src="https://ypfs3.s3.us-west-2.amazonaws.com/photos/STp3MC20tI0jLYFXbkuOIM0CVjp6L5G9tw03jmWE.gif" class="rounded-lg"/>
+            <!-- <img src="https://ypfs3.s3.us-west-2.amazonaws.com/photos/STp3MC20tI0jLYFXbkuOIM0CVjp6L5G9tw03jmWE.gif" class="rounded-lg"/> -->
+            <video controls width="100%">
+              <source src="https://ypfs3.s3.us-west-2.amazonaws.com/videos/672a3944395d8.mp4" type="video/mp4" />
+            </video>
            </div>
        </div>
        <div 
