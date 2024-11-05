@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div v-if="isReady">
         <BgHeader>
             <div 
                 class="bg-service relative" 
@@ -14,10 +14,10 @@
                 <div class="md:px-20 px-5 md:py-20 py-5 text-black">
                     <div class="w-11/12 mx-auto">
                         <div class="text-lg leading-9">                              
-                            <p class="mb-4">                        
+                            <p>                        
                                 <img class="float-right ml-1" src="/images/sba2.png" />  
-                                At The C.A.S.E. Engineering Group, we specialize in delivering program support and advisory services that empower organizations to overcome complex challenges. Founded on expertise in Cybersecurity, Architecture, Strategy, and Engineering, we have grown into a versatile team capable of providing dynamic solutions across a wide range of industries. While our roots are in information technology,                                                    
-                                <img class="float-left mr-2 mb-2" src="/images/sdvosb2.png" style="shape-outside: circle();"/>
+                                At The C.A.S.E. Engineering Group, we specialize in delivering program support and advisory services that empower organizations to overcome complex challenges. Founded on expertise in Cybersecurity, Architecture, Strategy, and Engineering, we have grown into a versatile team capable of providing dynamic solutions across a wide range of industries. While our roots are in information technology,
+                                <img class="float-left mt-6 mr-2" src="/images/sdvosb2.png" style="shape-outside: circle();"/>
                                 our impact goes far beyond. Through our innovative approach to research and 
                                 problem solving and leveraging an extensive partner network, we deliver solutions 
                                 in areas outside of IT as well. From optimizing operations and enhancing 
@@ -64,6 +64,14 @@
 </template>
 <script>
 export default {
-    layout: 'subPage'
+    layout: 'subPage',
+    data(){
+        return {
+            isReady: false
+        }
+    },
+    mounted(){ 
+        this.isReady = true;
+    }
 }
 </script>
