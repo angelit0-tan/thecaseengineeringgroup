@@ -14,8 +14,8 @@
                         </NuxtLink>
                     </li>
                     <li @click="toggle">
-                        <NuxtLink to="/about-us" :activeClass="'text-green'" replace="/about-us" :class="{'text-green' : slug.includes('about-us')}" external>
-                            About Us - {{  slug  }}
+                        <NuxtLink to="/about-us" :activeClass="'text-green'">
+                            About Us
                         </NuxtLink>
                     </li>
                     <li class="md:block hidden relative md:flex flex-col items-center">
