@@ -25,11 +25,27 @@
                 isReady: false
             }
         },
-        mounted(){
-            // this.player = videojs(this.$refs.videoPlayerRef, {}, () => {
-            //     this.player.log('onPlayerReady', this);
-            //     this.player.play();
-            // });
-        }
+        // mounted(){
+        //     this.player = videojs(this.$refs.videoPlayerRef, {
+        //         controls: true,
+        //         muted: true,
+        //         autoplay: true,
+        //         loop: true,
+        //         preload: true,
+        //     }, () => {
+        //         this.player.log('onPlayerReady', this);
+        //         this.player.play();
+        //     });
+        // }
     }
 </script>
+<style scoped>
+/* purgecss start ignore */
+@import 'video.js/dist/video-js.min.css';
+
+/* purgecss end ignore */
+
+.video-js-100 {
+  height: 100% !important;
+}
+</style>
