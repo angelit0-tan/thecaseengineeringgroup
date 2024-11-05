@@ -32,9 +32,7 @@
                Who We Are and Why It Matters
            </div>
            <div class="w-4/5 mx-auto">
-            <video controls width="100%" ref="homeVideoRef">
-              <source src="https://ypfs3.s3.us-west-2.amazonaws.com/videos/672a3944395d8.mp4" type="video/mp4" />
-            </video>
+            <VideoPlayer/>
            </div>
        </div>
        <div 
@@ -61,7 +59,7 @@
   </div>
 </template>
 <script>
-  import videojs from 'video.js';
+import VideoPlayer from '../components/VideoPlayer.vue';
 
   export default{
     data() {
@@ -112,15 +110,20 @@
           name: 'Offices of Lawyers',
           link: 'https://www.naics.com/naics-code-description/?code=541110&v=2022'
         }],
-        homeVideoRef: null
+        videoPlayer: null,
+        player: null,
       }
     },
-    mounted() {
-      this.player = videojs(this.$refs.homeVideoRef);
-      setTimeout(() => {
-        this.player.play();
-      }, 2000)
-    }
+    // mounted() {
+    //   this.player = videojs(this.$refs.videoPlayer);
+    //   setTimeout(() => {
+    //   this.player.play();
+    // }, 5000); // 5 seconds delay
+    //   // setTimeout(() => {
+    //   //   // player.play();
+    //   //   console.log(player)
+    //   // }, 2000)
+    // }
   }
 </script>
 <style lang="scss" scoped>
