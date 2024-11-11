@@ -47,7 +47,7 @@ app.post('/email', upload.single('file'), async(req, res) => {
         first_name,
         address: process.env.MAIL_FROM
       },
-      to: 'kenyatta.craten@thecaseengineeringgroup.com',
+      to: 'info@thecaseengineeringgroup.com',
       subject,
       text: message,
       html: `<table>
